@@ -1,0 +1,61 @@
+{
+  "brand": {
+    "name": "Ẩm Thực Biên Hòa",
+    "slogan": "Nếm hương vị - Cảm nhận cả thành phố",
+    "description": "Khám phá những món ngon, đặc sản và địa điểm ăn uống, mang đậm hương vị Biên Hòa.",
+    "hotline": "+(84) 368-006-482",
+    "address": "Huỳnh Văn Nghệ, Thành phố Đồng Nai - Biên Hòa",
+    "email": "welcome@amthucbienhoa.com"
+  },
+  "navLinks": [
+    { "title": "Trang chủ", "href": "#hero", "active": true },
+    { "title": "Món ngon", "href": "#streetfood" },
+    { "title": "Địa điểm", "href": "#restaurants" },
+    { "title": "Đặc sản", "href": "#specialties" },
+    { "title": "Hành trình", "href": "#story" },
+    { "title": "Tin tức", "href": "#news" },
+    { "title": "Đánh giá", "href": "#reviews" }
+  ],
+  "specialties": [
+    {
+      "name": "Bưởi Tân Triều",
+      "image": "assets/images/specialties/buoi_tan_trieu.jpg",
+      "svg": "assets/images/specialties/buoi_tan_trieu.svg"
+    },
+    {
+      "name": "Mít Tố Nữ",
+      "image": "assets/images/specialties/mit_to_nu.jpg",
+      "svg": "assets/images/specialties/mit_to_nu.svg"
+    },
+    {
+      "name": "Rượu bưởi",
+      "image": "assets/images/specialties/ruou_buoi.jpg",
+      "svg": "assets/images/specialties/ruou_buoi.svg"
+    },
+    {
+      "name": "Canh chua lá giang",
+      "image": "assets/images/specialties/canh_chua_la_giang.jpg",
+      "svg": "assets/images/specialties/canh_chua_la_giang.svg"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Tài khoản người dùng",
+      "rating": 5,
+      "text": "Mình thích nhất là phần gợi ý món ngon và địa chỉ rất rõ ràng. Nhờ vậy dễ tìm địa chỉ đi ăn quanh Biên Hòa hơn.",
+      "time": "4 ngày trước"
+    },
+    {
+      "name": "Tài khoản người dùng",
+      "rating": 5,
+      "text": "Website trình bày đẹp, dễ xem. Món ăn, quán địa phương và hình ảnh đều tạo cảm giác rất gần gũi với Biên Hòa.",
+      "time": "1 ngày trước"
+    },
+    {
+      "name": "Tài khoản người dùng",
+      "rating": 5,
+      "text": "Không chỉ giới thiệu quán ăn, trang còn cho mình cảm giác hiểu hơn về câu chuyện, con người và nhịp sống của TP.",
+      "time": "3 tuần trước"
+    }
+  ]
+}

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm Thực Biên Hòa | Nếm Hương Vị - Cảm Nhận Cả Thành Phố</title>
+    <meta name="description" content="Khám phá những món ngon, đặc sản và địa điểm ăn uống mang đậm hương vị Biên Hòa, Đồng Nai.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans for clean modern typography matching reference -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon for clean, crisp icons matching reference -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+</head>
+<body>
+
+    <!-- =================================================================
+         1. HERO SECTION & TOP NAVBAR (Image 1 Reference)
+         ================================================================= -->
+    <header class="hero-wrapper" id="hero">
+        <!-- Top Transparent Overlay Navigation -->
+        <nav class="site-nav">
+            <div class="container nav-inner">
+                <a href="#hero" class="nav-brand-mobile">
+                    <span>Ẩm Thực</span> Biên Hòa
+                </a>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <i class="ri-menu-line"></i>
+                </button>
+                <div class="nav-island">
+                    <ul class="nav-links-list" id="nav-list">
+                        <li><a href="#hero" class="nav-link-item active">Trang chủ</a></li>
+                        <li><a href="#streetfood" class="nav-link-item">Món ngon</a></li>
+                        <li><a href="#restaurants" class="nav-link-item">Địa điểm</a></li>
+                        <li><a href="#story" class="nav-link-item">Hành trình</a></li>
+                    </ul>
+                    <a href="#feedback" class="btn-nav-contact">
+                        Liên hệ ngay <i class="ri-arrow-right-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Content: Floating Dark Card on Left -->
+        <div class="hero-content-area">
+            <div class="container">
+                <div class="hero-floating-card">
+                    <h1 class="hero-main-title">
+                        <span class="hero-title-yellow">ẨM THỰC</span>
+                        <span class="hero-title-white">BIÊN HÒA</span>
+                    </h1>
+                    <p class="hero-slogan">NẾM HƯƠNG VỊ - CẢM NHẬN CẢ THÀNH PHỐ</p>
+                    <p class="hero-description">
+                        Khám phá những món ngon, đặc sản và địa<br>điểm ăn uống, mang đậm hương vị Biên Hòa.
+                    </p>
+                    
+                    <div>
+                        <a href="#streetfood" class="hero-btn-primary">
+                            <i class="ri-restaurant-2-line"></i> KHÁM PHÁ MÓN NGON <i class="ri-arrow-right-fill"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-btn-group-outline">
+                        <a href="#explore" class="hero-btn-outline">
+                            <i class="ri-book-open-line"></i> XEM FOOD MAP
+                        </a>
+                        <a href="#restaurants" class="hero-btn-outline">
+                            <i class="ri-map-pin-2-line"></i> XEM ĐỊA ĐIỂM
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         2. "ĐẾN BIÊN HÒA ĂN GÌ?" (Image 2 Reference)
+         ================================================================= -->
+    <section class="explore-section" id="explore">
+        <div class="container">
+            <div class="explore-header">
+                <h2 class="explore-title">Đến Biên Hòa ăn gì?</h2>
+                <p class="explore-subtitle">
+                    Không chỉ tìm món ngon, hãy khám phá Biên Hòa qua những hương vị, địa điểm và câu chuyện đặc trưng của thành phố.
+                </p>
+            </div>
+
+            <!-- 4 Categories Grid -->
+            <div class="explore-grid">
+                <!-- Card 1: Ẩm thực đường phố -->
+                <article class="explore-card">
+                    <div class="explore-card-img-wrapper">
+                        <img src="assets/images/categories/cha_lui.jpg" alt="Ẩm thực đường phố Biên Hòa" class="explore-card-img">
+                    </div>
+                    <div class="explore-card-body">
+                        <h3 class="explore-card-title">
+                            <i class="ri-restaurant-line"></i> Ẩm thực đường phố
+                        </h3>
+                        <p class="explore-card-desc">
+                            Khám phá những món ăn mang hương vị riêng của Biên Hòa.
+                        </p>
+                        <a href="#streetfood" class="btn-pill-dark">
+                            XEM MÓN NGON <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 2: Không gian thành phố -->
+                <article class="explore-card">
+                    <div class="explore-card-img-wrapper">
+                        <img src="assets/images/categories/city_night.jpg" alt="Không gian thành phố Biên Hòa" class="explore-card-img" onerror="this.onerror=null; this.src='assets/images/categories/city_night.svg';">
+                    </div>
+                    <div class="explore-card-body">
+                        <h3 class="explore-card-title">
+                            <i class="ri-building-line"></i> Không gian thành phố
+                        </h3>
+                        <p class="explore-card-desc">
+                            Cảm nhận Biên Hòa qua những góc phố, khu dân cư và nhịp sống địa phương.
+                        </p>
+                        <a href="#spaces" class="btn-pill-dark">
+                            KHÁM PHÁ BIÊN HÒA <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 3: Quán ăn địa phương -->
+                <article class="explore-card">
+                    <div class="explore-card-img-wrapper">
+                        <img src="assets/images/categories/local_soup.jpg" alt="Quán ăn địa phương Biên Hòa" class="explore-card-img" onerror="this.onerror=null; this.src='assets/images/categories/local_soup.svg';">
+                    </div>
+                    <div class="explore-card-body">
+                        <h3 class="explore-card-title">
+                            <i class="ri-store-2-line"></i> Quán ăn địa phương
+                        </h3>
+                        <p class="explore-card-desc">
+                            Tìm những quán quen thuộc, món nổi bật và địa điểm đáng thử.
+                        </p>
+                        <a href="#restaurants" class="btn-pill-dark">
+                            XEM ĐỊA ĐIỂM <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 4: Đặc sản Biên Hòa -->
+                <article class="explore-card">
+                    <div class="explore-card-img-wrapper">
+                        <img src="assets/images/categories/buoi_tan_trieu.jpg" alt="Đặc sản Bưởi Tân Triều" class="explore-card-img" onerror="this.onerror=null; this.src='assets/images/categories/buoi_tan_trieu.svg';">
+                    </div>
+                    <div class="explore-card-body">
+                        <h3 class="explore-card-title">
+                            <i class="ri-leaf-line"></i> Đặc sản Biên Hòa
+                        </h3>
+                        <p class="explore-card-desc">
+                            Tìm hiểu những sản vật và hương vị gắn với vùng đất Đồng Nai.
+                        </p>
+                        <a href="#specialties" class="btn-pill-dark">
+                            KHÁM PHÁ ĐẶC SẢN <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         3. "ẨM THỰC ĐƯỜNG PHỐ" (Image 3 Reference)
+         ================================================================= -->
+    <section class="street-food-section" id="streetfood">
+        <div class="container">
+            <!-- Top Slider / 3 Featured Showcase Photos -->
+            <div class="showcase-slider-wrapper">
+                <button class="slider-arrow-btn prev" aria-label="Xem hình trước">
+                    <i class="ri-arrow-left-s-line"></i>
+                </button>
+
+                <!-- Left photo: Mì Quảng / Bún tôm -->
+                <div class="showcase-item side">
+                    <img src="assets/images/streetfood/mi_quang.jpg" alt="Mì quảng tôm thịt bánh tráng" onerror="this.onerror=null; this.src='assets/images/streetfood/mi_quang.svg';">
+                </div>
+
+                <!-- Center photo: Chả lụi nướng cuốn rau sống -->
+                <div class="showcase-item center">
+                    <img src="assets/images/categories/cha_lui.jpg" alt="Mẹt chả lụi nướng rau sống">
+                </div>
+
+                <!-- Right photo: Gỏi bưởi bày trong quả bưởi -->
+                <div class="showcase-item side">
+                    <img src="assets/images/streetfood/goi_buoi.jpg" alt="Gỏi bưởi quả bưởi tỉa hoa" onerror="this.onerror=null; this.src='assets/images/streetfood/goi_buoi.svg';">
+                </div>
+
+                <button class="slider-arrow-btn next" aria-label="Xem hình sau">
+                    <i class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+
+            <!-- Centered Heading with Fork/Knife Icon -->
+            <div class="section-header-centered">
+                <i class="ri-restaurant-line"></i>
+                <h2>ẨM THỰC ĐƯỜNG PHỐ</h2>
+            </div>
+
+            <!-- 5 Dish Cards Grid -->
+            <div class="dishes-5-grid">
+                <!-- Dish 1: ZEN Tea Biên Hòa -->
+                <article class="dish-small-card">
+                    <div class="dish-small-img-box">
+                        <img src="assets/images/streetfood/zen_tea.jpg" alt="ZEN Tea Biên Hòa" onerror="this.onerror=null; this.src='assets/images/streetfood/zen_tea.svg';">
+                    </div>
+                    <div class="dish-small-body">
+                        <h4 class="dish-small-name">ZEN Tea Biên Hòa</h4>
+                        <div class="dish-small-actions">
+                            <span class="dish-small-action-item"><i class="ri-information-line"></i> Giới thiệu</span>
+                            <span class="dish-small-action-item"><i class="ri-map-pin-line"></i> Địa điểm</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 2: Chả lụi Cô Yến -->
+                <article class="dish-small-card">
+                    <div class="dish-small-img-box">
+                        <img src="assets/images/categories/cha_lui.jpg" alt="Chả lụi Cô Yến">
+                    </div>
+                    <div class="dish-small-body">
+                        <h4 class="dish-small-name">Chả lụi Cô Yến</h4>
+                        <div class="dish-small-actions">
+                            <span class="dish-small-action-item"><i class="ri-information-line"></i> Giới thiệu</span>
+                            <span class="dish-small-action-item"><i class="ri-map-pin-line"></i> Địa điểm</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 3: Lẩu bò Năm Cảnh -->
+                <article class="dish-small-card">
+                    <div class="dish-small-img-box">
+                        <img src="assets/images/streetfood/lau_bo.jpg" alt="Lẩu bò Năm Cảnh" onerror="this.onerror=null; this.src='assets/images/streetfood/lau_bo.svg';">
+                    </div>
+                    <div class="dish-small-body">
+                        <h4 class="dish-small-name">Lẩu bò Năm Cảnh</h4>
+                        <div class="dish-small-actions">
+                            <span class="dish-small-action-item"><i class="ri-information-line"></i> Giới thiệu</span>
+                            <span class="dish-small-action-item"><i class="ri-map-pin-line"></i> Địa điểm</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 4: Quán ốc Minh Tâm -->
+                <article class="dish-small-card">
+                    <div class="dish-small-img-box">
+                        <img src="assets/images/streetfood/quan_oc.jpg" alt="Quán ốc Minh Tâm" onerror="this.onerror=null; this.src='assets/images/streetfood/quan_oc.svg';">
+                    </div>
+                    <div class="dish-small-body">
+                        <h4 class="dish-small-name">Quán ốc Minh Tâm</h4>
+                        <div class="dish-small-actions">
+                            <span class="dish-small-action-item"><i class="ri-information-line"></i> Giới thiệu</span>
+                            <span class="dish-small-action-item"><i class="ri-map-pin-line"></i> Địa điểm</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 5: Lẩu Tôm 5 Ri -->
+                <article class="dish-small-card">
+                    <div class="dish-small-img-box">
+                        <img src="assets/images/streetfood/lau_tom.jpg" alt="Lẩu Tôm 5 Ri" onerror="this.onerror=null; this.src='assets/images/streetfood/lau_tom.svg';">
+                    </div>
+                    <div class="dish-small-body">
+                        <h4 class="dish-small-name">Lẩu Tôm 5 Ri</h4>
+                        <div class="dish-small-actions">
+                            <span class="dish-small-action-item"><i class="ri-information-line"></i> Giới thiệu</span>
+                            <span class="dish-small-action-item"><i class="ri-map-pin-line"></i> Địa điểm</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- View More Button -->
+            <div class="btn-center-wrapper">
+                <a href="#restaurants" class="btn-pill-dark">
+                    XEM THÊM <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         4. "KHÔNG GIAN THÀNH PHỐ" (Image 4 Reference)
+         ================================================================= -->
+    <section class="city-spaces-section" id="spaces">
+        <div class="container">
+            <!-- Top Slider / 3 Scenic Showcase Photos -->
+            <div class="showcase-slider-wrapper">
+                <button class="slider-arrow-btn prev" aria-label="Xem hình cảnh trước">
+                    <i class="ri-arrow-left-s-line"></i>
+                </button>
+
+                <!-- Left: Bờ kè ven sông Đồng Nai -->
+                <div class="showcase-item side">
+                    <img src="assets/images/spaces/river_bank.jpg" alt="Bờ kè sông Đồng Nai" onerror="this.onerror=null; this.src='assets/images/spaces/river_bank.svg';">
+                </div>
+
+                <!-- Center: Khu du lịch Bửu Long (Hồ Long Ẩn) -->
+                <div class="showcase-item center">
+                    <img src="assets/images/spaces/buu_long_lake.jpg" alt="Hồ Long Ẩn KDL Bửu Long" onerror="this.onerror=null; this.src='assets/images/spaces/buu_long_lake.svg';">
+                </div>
+
+                <!-- Right: Cổng tam quan cổ kính Văn Miếu Trấn Biên -->
+                <div class="showcase-item side">
+                    <img src="assets/images/spaces/tran_bien_gate.jpg" alt="Cổng Tam Quan Văn Miếu Trấn Biên" onerror="this.onerror=null; this.src='assets/images/spaces/tran_bien_gate.svg';">
+                </div>
+
+                <button class="slider-arrow-btn next" aria-label="Xem hình cảnh sau">
+                    <i class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+
+            <!-- Centered Heading with Building Icon -->
+            <div class="section-header-centered">
+                <i class="ri-building-line"></i>
+                <h2>KHÔNG GIAN THÀNH PHỐ</h2>
+            </div>
+
+            <!-- 3 City Spaces Cards -->
+            <div class="spaces-3-grid">
+                <!-- Card 01: Địa điểm tham quan -->
+                <article class="space-card">
+                    <div class="space-img-box">
+                        <span class="space-number-badge">01</span>
+                        <img src="assets/images/spaces/tran_bien.jpg" alt="Địa điểm tham quan Biên Hòa" onerror="this.onerror=null; this.src='assets/images/spaces/tran_bien.svg';">
+                    </div>
+                    <div class="space-card-body">
+                        <div>
+                            <h3 class="space-card-title">Địa điểm tham quan</h3>
+                            <p class="space-card-desc">
+                                Không gian thoáng đãng, nơi cảm nhận nhịp sống yên bình của thành phố.
+                            </p>
+                        </div>
+                        <a href="#hero" class="circle-arrow-btn" aria-label="Xem chi tiết địa điểm">➔</a>
+                    </div>
+                </article>
+
+                <!-- Card 02: Góc phố quen -->
+                <article class="space-card">
+                    <div class="space-img-box">
+                        <span class="space-number-badge">02</span>
+                        <img src="assets/images/spaces/old_street.jpg" alt="Góc phố quen Biên Hòa" onerror="this.onerror=null; this.src='assets/images/spaces/old_street.svg';">
+                    </div>
+                    <div class="space-card-body">
+                        <div>
+                            <h3 class="space-card-title">Góc phố quen</h3>
+                            <p class="space-card-desc">
+                                Những tuyến đường và hàng quán tạo nên vẻ rất riêng của Biên Hòa.
+                            </p>
+                        </div>
+                        <a href="#hero" class="circle-arrow-btn" aria-label="Xem chi tiết góc phố">➔</a>
+                    </div>
+                </article>
+
+                <!-- Card 03: Biên Hòa về đêm -->
+                <article class="space-card">
+                    <div class="space-img-box">
+                        <span class="space-number-badge">03</span>
+                        <img src="assets/images/spaces/night_city.jpg" alt="Biên Hòa về đêm" onerror="this.onerror=null; this.src='assets/images/spaces/night_city.svg';">
+                    </div>
+                    <div class="space-card-body">
+                        <div>
+                            <h3 class="space-card-title">Biên Hòa về đêm</h3>
+                            <p class="space-card-desc">
+                                Ánh đèn, quán xá và không khí thư thả khi thành phố lên đèn.
+                            </p>
+                        </div>
+                        <a href="#hero" class="circle-arrow-btn" aria-label="Xem chi tiết cảnh đêm">➔</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Quote & View More Button -->
+            <div class="spaces-footer-row">
+                <blockquote class="city-quote">
+                    <i class="ri-double-quotes-l"></i>
+                    <span>Hiểu một thành phố không chỉ qua món ăn, mà còn qua nhịp sống diễn ra quanh nó.</span>
+                </blockquote>
+                <div>
+                    <a href="#restaurants" class="btn-pill-dark">
+                        XEM THÊM <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         5. "QUÁN ĂN ĐỊA PHƯƠNG" (Image 5 Reference)
+         ================================================================= -->
+    <section class="restaurants-section" id="restaurants">
+        <div class="container">
+            <!-- Top Panoramic Banner: Cầu Ghềnh bắc qua sông Đồng Nai trong hoàng hôn -->
+            <div class="panoramic-banner-wrapper">
+                <img src="assets/images/spaces/bridge_banner.jpg" alt="Cầu Ghềnh Đồng Nai bắc qua sông">
+            </div>
+
+            <!-- Centered Heading with Shop/Store Icon -->
+            <div class="section-header-centered">
+                <i class="ri-store-2-line"></i>
+                <h2>QUÁN ĂN ĐỊA PHƯƠNG</h2>
+            </div>
+
+            <!-- 5 Restaurant Cards Grid -->
+            <div class="restaurants-5-grid">
+                <!-- Card 1: Gỏi cá Kim Yến -->
+                <article class="restaurant-card">
+                    <div class="restaurant-img-box">
+                        <img src="assets/images/restaurants/goi_ca.jpg" alt="Gỏi cá Kim Yến" onerror="this.onerror=null; this.src='assets/images/restaurants/goi_ca.svg';">
+                    </div>
+                    <div class="restaurant-card-body">
+                        <div>
+                            <h3 class="restaurant-card-title">Gỏi cá Kim Yến</h3>
+                            <div class="restaurant-info-list">
+                                <div class="restaurant-info-item">
+                                    <i class="ri-restaurant-2-line"></i>
+                                    <span>Gỏi cá, cháo lươn, mực xào...</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-money-dollar-circle-line"></i>
+                                    <span>Giá từ 100.000đ</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-time-line"></i>
+                                    <span>10h00 - 22h00</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-map-pin-line"></i>
+                                    <span>Phạm Văn Thuận, Tân Mai, Biên Hòa</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="tel:0900000000" class="circle-arrow-btn" aria-label="Xem chi tiết quán">➔</a>
+                    </div>
+                </article>
+
+                <!-- Card 2: Bánh Xèo Cô Tám -->
+                <article class="restaurant-card">
+                    <div class="restaurant-img-box">
+                        <img src="assets/images/restaurants/banh_xeo.jpg" alt="Bánh Xèo Cô Tám" onerror="this.onerror=null; this.src='assets/images/restaurants/banh_xeo.svg';">
+                    </div>
+                    <div class="restaurant-card-body">
+                        <div>
+                            <h3 class="restaurant-card-title">Bánh Xèo Cô Tám</h3>
+                            <div class="restaurant-info-list">
+                                <div class="restaurant-info-item">
+                                    <i class="ri-restaurant-2-line"></i>
+                                    <span>Bánh xèo, gỏi cuốn</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-money-dollar-circle-line"></i>
+                                    <span>Giá từ 40.000đ</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-time-line"></i>
+                                    <span>10h00 - 21h30</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-map-pin-line"></i>
+                                    <span>136 Đ. Trần Quốc Toản, Tam Hiệp, Đồng Nai</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="tel:0900000000" class="circle-arrow-btn" aria-label="Xem chi tiết quán">➔</a>
+                    </div>
+                </article>
+
+                <!-- Card 3: Lẩu Tôm 5 Ri -->
+                <article class="restaurant-card">
+                    <div class="restaurant-img-box">
+                        <img src="assets/images/restaurants/lau_tom_5ri.jpg" alt="Lẩu Tôm 5 Ri" onerror="this.onerror=null; this.src='assets/images/restaurants/lau_tom_5ri.svg';">
+                    </div>
+                    <div class="restaurant-card-body">
+                        <div>
+                            <h3 class="restaurant-card-title">Lẩu Tôm 5 Ri</h3>
+                            <div class="restaurant-info-list">
+                                <div class="restaurant-info-item">
+                                    <i class="ri-restaurant-2-line"></i>
+                                    <span>Chạo tôm, cá thác lác,...</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-money-dollar-circle-line"></i>
+                                    <span>150.000đ - 350.000đ</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-time-line"></i>
+                                    <span>10h00 - 22h00</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-map-pin-line"></i>
+                                    <span>Hẻm 487 CMT8, TP. Biên Hòa, Đồng Nai</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="tel:0900000000" class="circle-arrow-btn" aria-label="Xem chi tiết quán">➔</a>
+                    </div>
+                </article>
+
+                <!-- Card 4: Làng bưởi Năm Huệ Tân Triều -->
+                <article class="restaurant-card">
+                    <div class="restaurant-img-box">
+                        <img src="assets/images/restaurants/lang_buoi.jpg" alt="Làng bưởi Năm Huệ Tân Triều" onerror="this.onerror=null; this.src='assets/images/restaurants/lang_buoi.svg';">
+                    </div>
+                    <div class="restaurant-card-body">
+                        <div>
+                            <h3 class="restaurant-card-title">Làng bưởi Năm Huệ Tân Triều</h3>
+                            <div class="restaurant-info-list">
+                                <div class="restaurant-info-item">
+                                    <i class="ri-restaurant-2-line"></i>
+                                    <span>Gà hấp bưởi</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-money-dollar-circle-line"></i>
+                                    <span>300.000đ - 350.000đ</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-time-line"></i>
+                                    <span>10h00 - 22h00</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-map-pin-line"></i>
+                                    <span>109/7 Hương Lộ 9, Tân Bình, Vĩnh Cửu, Đồng Nai.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="tel:0900000000" class="circle-arrow-btn" aria-label="Xem chi tiết quán">➔</a>
+                    </div>
+                </article>
+
+                <!-- Card 5: Lẩu cá kèo Thanh Mai -->
+                <article class="restaurant-card">
+                    <div class="restaurant-img-box">
+                        <img src="assets/images/restaurants/lau_ca_keo.jpg" alt="Lẩu cá kèo Thanh Mai" onerror="this.onerror=null; this.src='assets/images/restaurants/lau_ca_keo.svg';">
+                    </div>
+                    <div class="restaurant-card-body">
+                        <div>
+                            <h3 class="restaurant-card-title">Lẩu cá kèo Thanh Mai</h3>
+                            <div class="restaurant-info-list">
+                                <div class="restaurant-info-item">
+                                    <i class="ri-restaurant-2-line"></i>
+                                    <span>Lẩu cá kèo, lẩu nghêu,...</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-money-dollar-circle-line"></i>
+                                    <span>150.000đ - 600.000đ</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-time-line"></i>
+                                    <span>07h00 - 22h30</span>
+                                </div>
+                                <div class="restaurant-info-item">
+                                    <i class="ri-map-pin-line"></i>
+                                    <span>Chung cư A2, Trấn Biên, Đồng Nai</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="tel:0900000000" class="circle-arrow-btn" aria-label="Xem chi tiết quán">➔</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- View More Button -->
+            <div class="btn-center-wrapper">
+                <a href="#specialties" class="btn-pill-dark">
+                    XEM THÊM <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         6. "ĐẶC SẢN BIÊN HÒA" (Image 6 Reference)
+         ================================================================= -->
+    <section class="specialties-section" id="specialties">
+        <div class="container">
+            <div class="specialties-header">
+                <h2 class="specialties-title">
+                    <i class="ri-leaf-line"></i> ĐẶC SẢN BIÊN HÒA
+                </h2>
+                <p class="specialties-desc">
+                    Đặc sản Biên Hòa không chỉ để thưởng thức tại chỗ, mà còn mang theo hương vị và ký ức của vùng đất này. Từ bưởi Tân Triều trứ danh đến những sản phẩm đặc trưng khác, mỗi món ăn, thức quà đều chứa nét văn hóa và tình cảm của con người Biên Hòa.
+                </p>
+            </div>
+
+            <div class="specialties-layout">
+                <!-- Left 2x2 Grid of 4 Specialty Cards -->
+                <div class="specialties-2x2-grid">
+                    <!-- Specialty 1: Bưởi Tân Triều -->
+                    <article class="specialty-item-card">
+                        <div class="specialty-img-box">
+                            <img src="assets/images/specialties/buoi_tan_trieu.jpg" alt="Bưởi Tân Triều" onerror="this.onerror=null; this.src='assets/images/specialties/buoi_tan_trieu.svg';">
+                        </div>
+                        <div class="specialty-bottom-bar">
+                            <span class="specialty-name">Bưởi Tân Triều</span>
+                            <span class="circle-arrow-btn">➔</span>
+                        </div>
+                    </article>
+
+                    <!-- Specialty 2: Mít Tố Nữ -->
+                    <article class="specialty-item-card">
+                        <div class="specialty-img-box">
+                            <img src="assets/images/specialties/mit_to_nu.jpg" alt="Mít Tố Nữ" onerror="this.onerror=null; this.src='assets/images/specialties/mit_to_nu.svg';">
+                        </div>
+                        <div class="specialty-bottom-bar">
+                            <span class="specialty-name">Mít Tố Nữ</span>
+                            <span class="circle-arrow-btn">➔</span>
+                        </div>
+                    </article>
+
+                    <!-- Specialty 3: Rượu bưởi -->
+                    <article class="specialty-item-card">
+                        <div class="specialty-img-box">
+                            <img src="assets/images/specialties/ruou_buoi.jpg" alt="Rượu bưởi" onerror="this.onerror=null; this.src='assets/images/specialties/ruou_buoi.svg';">
+                        </div>
+                        <div class="specialty-bottom-bar">
+                            <span class="specialty-name">Rượu bưởi</span>
+                            <span class="circle-arrow-btn">➔</span>
+                        </div>
+                    </article>
+
+                    <!-- Specialty 4: Canh chua lá giang -->
+                    <article class="specialty-item-card">
+                        <div class="specialty-img-box">
+                            <img src="assets/images/specialties/canh_chua_la_giang.jpg" alt="Canh chua lá giang" onerror="this.onerror=null; this.src='assets/images/specialties/canh_chua_la_giang.svg';">
+                        </div>
+                        <div class="specialty-bottom-bar">
+                            <span class="specialty-name">Canh chua lá giang</span>
+                            <span class="circle-arrow-btn">➔</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Right Featured Large Image & Button -->
+                <div class="specialties-featured-wrapper">
+                    <div class="specialty-featured-img-box">
+                        <img src="assets/images/specialties/canh_chua_featured.jpg" alt="Thố canh chua lá giang Biên Hòa" onerror="this.onerror=null; this.src='assets/images/specialties/canh_chua_featured.svg';">
+                        <!-- Slider pagination indicator bar -->
+                        <div class="specialty-indicator-line">
+                            <div class="specialty-indicator-line-active"></div>
+                        </div>
+                    </div>
+                    <div class="btn-center-wrapper" style="margin-top: 24px;">
+                        <a href="#story" class="btn-pill-dark">
+                            XEM THÊM <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         7. "HÀNH TRÌNH KỂ CHUYỆN BIÊN HÒA" (Image 7 Reference)
+         ================================================================= -->
+    <section class="story-section" id="story">
+        <div class="container">
+            <div class="story-container-card">
+                <div class="story-grid">
+                    <!-- Left Content -->
+                    <div class="story-content-col">
+                        <h2 class="story-title">
+                            HÀNH TRÌNH KỂ CHUYỆN <span class="story-title-gold">BIÊN HÒA</span> BẰNG HƯƠNG VỊ
+                        </h2>
+                        <p class="story-subheading">Một hành trình từ sự tò mò đến sự gắn bó</p>
+                        <div class="story-paragraphs">
+                            <p>
+                                Ẩm thực Biên Hòa với chúng tôi không chỉ là món ngon, mà còn là những câu chuyện, thói quen và nhịp sống rất riêng của thành phố. Dự án bắt đầu từ một câu hỏi đơn giản: Muốn khám phá Biên Hòa qua ẩm thực thì nên bắt đầu từ đâu?
+                            </p>
+                            <p>
+                                Từ đó, team cùng nhau trải nghiệm nhiều hơn, ghi lại những món ăn, quán địa phương và góc phố quen thuộc. Dù mỗi người có một câu chuyện khác nhau với Biên Hòa, chúng tôi đều muốn kể lại thành phố này qua hương vị, địa điểm và những trải nghiệm chân thật nhất.
+                            </p>
+                            <p>
+                                Mỗi nội dung trong dự án là một phần của hành trình trải nghiệm thật: tự mình tìm hiểu, ghé quán, trò chuyện, ghi nhận và chọn lọc để giới thiệu lại theo cách dễ tiếp cận hơn.
+                            </p>
+                            <p>
+                                Chúng tôi tin rằng, đôi khi để hiểu một thành phố, không cần bắt đầu từ những điều quá lớn.
+                            </p>
+                        </div>
+                        <a href="#reviews" class="btn-story-action">
+                            Khám phá hành trình của chúng tôi <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+
+                    <!-- Right Multi-Photo Collage -->
+                    <div class="story-collage-grid">
+                        <div class="story-photo-left">
+                            <img src="assets/images/story/team_street_food.jpg" alt="Team khám phá ẩm thực vỉa hè Biên Hòa" onerror="this.onerror=null; this.src='assets/images/story/team_street_food.svg';">
+                        </div>
+                        <div class="story-photo-right-col">
+                            <div class="story-photo-item">
+                                <img src="assets/images/story/food_spread.jpg" alt="Món ăn đường phố Biên Hòa" onerror="this.onerror=null; this.src='assets/images/story/food_spread.svg';">
+                            </div>
+                            <div class="story-photo-item">
+                                <img src="assets/images/story/noodle_bowls.jpg" alt="Những tô hủ tiếu nóng hổi" onerror="this.onerror=null; this.src='assets/images/story/noodle_bowls.svg';">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         8. "TIN TỨC & BÀI VIẾT" (News Section - Empty State)
+         ================================================================= -->
+    <section class="news-section" id="news">
+        <div class="container">
+            <div class="section-header-centered">
+                <i class="ri-newspaper-line"></i>
+                <h2>TIN TỨC & BÀI VIẾT</h2>
+            </div>
+            <p class="news-subtitle">
+                Cập nhật những câu chuyện ẩm thực mới nhất, sự kiện văn hóa và cẩm nang khám phá món ngon Biên Hòa.
+            </p>
+
+            <!-- Trạng thái chưa có bài viết (Empty State Layout) -->
+            <div class="news-empty-container">
+                <div class="news-empty-icon-circle">
+                    <i class="ri-article-line"></i>
+                </div>
+                <h3 class="news-empty-title">Chưa có bài viết mới</h3>
+                <p class="news-empty-desc">
+                    Chúng tôi đang biên soạn các bài viết đặc sắc về nét đẹp ẩm thực, địa điểm ăn uống trứ danh và câu chuyện thú vị xứ Bưởi. Bài viết sẽ sớm được cập nhật tại đây!
+                </p>
+                <div class="news-subscribe-wrapper">
+                    <form class="news-subscribe-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Chúng tôi sẽ gửi thông báo ngay khi có bài viết đầu tiên.'); this.reset();">
+                        <input type="email" placeholder="Nhập email của bạn để nhận bài viết mới..." required>
+                        <button type="submit" class="btn-pill-dark">
+                            ĐĂNG KÝ NHẬN TIN <i class="ri-notification-3-line"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Khung lưới bài viết mẫu (Sẵn sàng mở ra khi có bài viết thực tế) -->
+            <!--
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-card-img-box">
+                        <span class="news-card-badge">Cẩm Nang</span>
+                        <img src="assets/images/news/post_1.jpg" alt="Tiêu đề bài viết">
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-card-date"><i class="ri-calendar-line"></i> 28/09/2026</span>
+                        <h4 class="news-card-title">Top 10 món ăn sáng nức tiếng không thể bỏ qua ở Biên Hòa</h4>
+                        <p class="news-card-excerpt">Khám phá những hàng quán ăn sáng quen thuộc gắn bó qua nhiều thế hệ người dân Biên Hòa...</p>
+                        <a href="#" class="news-card-link">Đọc tiếp <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <!-- =================================================================
+         9. "NGƯỜI TRẢI NGHIỆM NÓI GÌ?" (Image 8 Reference)
+         ================================================================= -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="reviews-header">
+                <h2 class="reviews-title">
+                    Người trải nghiệm <span class="reviews-title-gold">nói gì?</span>
+                </h2>
+                <p class="reviews-subtitle">
+                    Những chia sẻ từ người đã khám phá món ngon và địa điểm ăn uống tại Biên Hòa.
+                </p>
+            </div>
+
+            <!-- 3 Testimonial Cards Grid -->
+            <div class="reviews-3-grid">
+                <!-- Review 1 -->
+                <article class="review-card">
+                    <div>
+                        <div class="review-card-header">
+                            <div class="review-user-info">
+                                <div class="review-avatar"><i class="ri-user-smile-line"></i></div>
+                                <div>
+                                    <h4 class="review-user-name">Tài khoản người dùng</h4>
+                                    <div class="review-stars">★★★★★</div>
+                                </div>
+                            </div>
+                            <div class="review-google-logo"><i class="ri-google-fill"></i></div>
+                        </div>
+                        <p class="review-card-text">
+                            Mình thích nhất là phần gợi ý món ngon và địa chỉ rất rõ ràng. Nhờ vậy dễ tìm địa chỉ đi ăn quanh Biên Hòa hơn.
+                        </p>
+                    </div>
+                    <div class="review-card-footer">
+                        <span>4 ngày trước</span>
+                    </div>
+                </article>
+
+                <!-- Review 2 -->
+                <article class="review-card">
+                    <div>
+                        <div class="review-card-header">
+                            <div class="review-user-info">
+                                <div class="review-avatar" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"><i class="ri-user-smile-line"></i></div>
+                                <div>
+                                    <h4 class="review-user-name">Tài khoản người dùng</h4>
+                                    <div class="review-stars">★★★★★</div>
+                                </div>
+                            </div>
+                            <div class="review-google-logo"><i class="ri-google-fill"></i></div>
+                        </div>
+                        <p class="review-card-text">
+                            Website trình bày đẹp, dễ xem. Món ăn, quán địa phương và hình ảnh đều tạo cảm giác rất gần gũi với Biên Hòa.
+                        </p>
+                    </div>
+                    <div class="review-card-footer">
+                        <span>1 ngày trước</span>
+                    </div>
+                </article>
+
+                <!-- Review 3 -->
+                <article class="review-card">
+                    <div>
+                        <div class="review-card-header">
+                            <div class="review-user-info">
+                                <div class="review-avatar" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);"><i class="ri-user-smile-line"></i></div>
+                                <div>
+                                    <h4 class="review-user-name">Tài khoản người dùng</h4>
+                                    <div class="review-stars">★★★★★</div>
+                                </div>
+                            </div>
+                            <div class="review-google-logo"><i class="ri-google-fill"></i></div>
+                        </div>
+                        <p class="review-card-text">
+                            Không chỉ giới thiệu quán ăn, trang còn cho mình cảm giác hiểu hơn về câu chuyện, con người và nhịp sống của TP.
+                        </p>
+                    </div>
+                    <div class="review-card-footer">
+                        <span>3 tuần trước</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- View More Button -->
+            <div class="btn-center-wrapper">
+                <a href="#feedback" class="btn-pill-dark">
+                    ĐỌC THÊM <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         9. "GỬI ĐÁNH GIÁ CHO CHÚNG TÔI" (Image 9 Reference)
+         ================================================================= -->
+    <section class="feedback-section" id="feedback">
+        <div class="container">
+            <h2 class="feedback-title">GỬI ĐÁNH GIÁ CHO CHÚNG TÔI</h2>
+
+            <div class="feedback-card">
+                <div class="feedback-rating-row">
+                    <span class="feedback-rating-question">Bạn đánh giá tổng thể trang web thế nào?</span>
+                    <div class="feedback-interactive-stars" id="star-rating">
+                        <i class="ri-star-line" data-val="1"></i>
+                        <i class="ri-star-line" data-val="2"></i>
+                        <i class="ri-star-line" data-val="3"></i>
+                        <i class="ri-star-line" data-val="4"></i>
+                        <i class="ri-star-line" data-val="5"></i>
+                    </div>
+                </div>
+
+                <p class="feedback-instruction">Vui lòng dành chút thời gian cho chúng tôi ý kiến của bạn</p>
+
+                <form class="feedback-input-box" id="feedback-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã gửi đóng góp ý kiến!'); this.reset();">
+                    <input type="text" class="feedback-input-line" placeholder="Nhập ý kiến hoặc câu hỏi của bạn tại đây..." required>
+                    <button type="submit" class="feedback-send-btn" aria-label="Gửi đánh giá">
+                        <i class="ri-send-plane-2-fill"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="feedback-subtext">
+                <p class="feedback-subtext-title">Bạn có thắc mắc hay cần tư vấn ?</p>
+                <p class="feedback-subtext-desc">Hãy để lại thông tin, đội ngũ của chúng tôi sẽ liên hệ sớm nhất.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         10. CHÂN TRANG CHÍNH THỨC (Image 9 Footer Reference)
+         ================================================================= -->
+    <footer class="site-footer-dark" id="footer">
+        <div class="container">
+            <div class="footer-center-content">
+                <h3 class="footer-brand-heading">ẨM THỰC BIÊN HÒA</h3>
+
+                <div class="footer-contact-items-row">
+                    <div class="footer-contact-item">
+                        <i class="ri-map-pin-line"></i>
+                        <span>Huỳnh Văn Nghệ, Thành phố Đồng Nai - Biên Hòa</span>
+                    </div>
+                    <div class="footer-divider-bar"></div>
+                    <div class="footer-contact-item">
+                        <i class="ri-phone-line"></i>
+                        <a href="tel:0368006482">+(84) 368-006-482</a>
+                    </div>
+                    <div class="footer-divider-bar"></div>
+                    <div class="footer-contact-item">
+                        <i class="ri-mail-line"></i>
+                        <a href="mailto:welcome@amthucbienhoa.com">welcome@amthucbienhoa.com</a>
+                    </div>
+                </div>
+
+                <div class="footer-social-icons-row">
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="social-circle-btn fb" aria-label="Facebook">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle-btn insta" aria-label="Instagram">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-circle-btn tiktok" aria-label="TikTok">
+                        <i class="ri-tiktok-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Hotline Call Button -->
+    <div class="floating-call">
+        <a href="tel:0368006482" class="btn-floating-call" title="Gọi ngay +(84) 368-006-482" aria-label="Gọi ngay">
+            <i class="ri-phone-fill"></i>
+        </a>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
