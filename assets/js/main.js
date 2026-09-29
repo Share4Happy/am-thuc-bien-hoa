@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!newsSection || !container) return;
 
         const categoryId = newsSection.getAttribute('data-category-id') || '158';
-        const apiUrl = `https://share4happy.com/wp-json/wp/v2/posts?categories=${categoryId}&_embed&per_page=6`;
+        const apiUrl = `https://share4happy.com/wp-json/wp/v2/posts?categories=${categoryId}&_embed&per_page=5`;
         const wpHomeUrl = 'https://share4happy.com/';
 
         let isFetched = false;
@@ -167,13 +167,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function renderPosts(posts) {
-            let html = '<div class="news-grid">';
+            let html = `
+                <div class="news-scroll-wrapper">
+                    <button class="news-scroll-arrow prev" id="news-prev-btn" aria-label="Bài trước">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </button>
+                    <div class="news-scroll-track" id="news-scroll-track">
+            `;
             posts.forEach(post => {
                 const rawTitle = decodeHtml(post.title?.rendered || 'Bài viết không có tiêu đề');
                 const link = post.link || wpHomeUrl;
                 const date = formatDate(post.date);
                 const rawExcerpt = stripHtml(post.excerpt?.rendered || '');
-                const excerpt = rawExcerpt.length > 120 ? rawExcerpt.substring(0, 117) + '...' : (rawExcerpt || 'Xem chi tiết bài viết hấp dẫn trên chuyên trang Share4Happy...');
+                const excerpt = rawExcerpt.length > 110 ? rawExcerpt.substring(0, 107) + '...' : (rawExcerpt || 'Xem chi tiết bài viết hấp dẫn trên chuyên trang Share4Happy...');
 
                 let imageUrl = '';
                 const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0];
@@ -205,8 +211,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     </article>
                 `;
             });
-            html += '</div>';
+            html += `
+                    </div>
+                    <button class="news-scroll-arrow next" id="news-next-btn" aria-label="Bài sau">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                </div>
+            `;
             container.innerHTML = html;
+
+            setupNewsScroll();
 
             if (footerAction) {
                 footerAction.style.display = 'flex';
@@ -216,6 +230,83 @@ document.addEventListener('DOMContentLoaded', () => {
                     </a>
                 `;
             }
+        }
+
+        function setupNewsScroll() {
+            const track = document.getElementById('news-scroll-track');
+            const prevBtn = document.getElementById('news-prev-btn');
+            const nextBtn = document.getElementById('news-next-btn');
+            if (!track) return;
+
+            const scrollStep = 342; // card width + gap
+
+            function updateArrowStates() {
+                if (!prevBtn || !nextBtn) return;
+                const maxScrollLeft = track.scrollWidth - track.clientWidth - 5;
+                if (track.scrollLeft <= 5) {
+                    prevBtn.classList.add('is-disabled');
+                } else {
+                    prevBtn.classList.remove('is-disabled');
+                }
+
+                if (track.scrollLeft >= maxScrollLeft) {
+                    nextBtn.classList.add('is-disabled');
+                } else {
+                    nextBtn.classList.remove('is-disabled');
+                }
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    track.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    track.scrollBy({ left: scrollStep, behavior: 'smooth' });
+                });
+            }
+
+            track.addEventListener('scroll', updateArrowStates, { passive: true });
+            setTimeout(updateArrowStates, 120);
+
+            // Drag to scroll functionality
+            let isDown = false;
+            let startX = 0;
+            let scrollLeftStart = 0;
+            let dragged = false;
+
+            track.addEventListener('mousedown', (e) => {
+                isDown = true;
+                dragged = false;
+                track.classList.add('is-dragging');
+                startX = e.pageX - track.offsetLeft;
+                scrollLeftStart = track.scrollLeft;
+            });
+
+            window.addEventListener('mouseup', () => {
+                if (!isDown) return;
+                isDown = false;
+                track.classList.remove('is-dragging');
+            });
+
+            track.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                const x = e.pageX - track.offsetLeft;
+                const walk = (x - startX) * 1.4;
+                if (Math.abs(x - startX) > 6) {
+                    dragged = true;
+                }
+                track.scrollLeft = scrollLeftStart - walk;
+            });
+
+            track.addEventListener('click', (e) => {
+                if (dragged) {
+                    e.preventDefault();
+                    dragged = false;
+                }
+            }, true);
         }
 
         function renderEmptyState() {

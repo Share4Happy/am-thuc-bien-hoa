@@ -15,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
     <!-- Custom Style -->
-    <link rel="stylesheet" href="assets/css/style.css?v=4">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
 
@@ -724,7 +724,25 @@
             <!-- Dynamic News Container (Handled by JS via API) -->
             <div id="news-content-container">
                 <!-- Skeleton Loader initially rendered while loading -->
-                <div class="news-skeleton-grid" id="news-skeleton-loader">
+                <div class="news-skeleton-track" id="news-skeleton-loader">
+                    <div class="news-skeleton-card">
+                        <div class="skeleton-box skeleton-img"></div>
+                        <div class="skeleton-body">
+                            <div class="skeleton-box skeleton-meta"></div>
+                            <div class="skeleton-box skeleton-title"></div>
+                            <div class="skeleton-box skeleton-text"></div>
+                            <div class="skeleton-box skeleton-btn"></div>
+                        </div>
+                    </div>
+                    <div class="news-skeleton-card">
+                        <div class="skeleton-box skeleton-img"></div>
+                        <div class="skeleton-body">
+                            <div class="skeleton-box skeleton-meta"></div>
+                            <div class="skeleton-box skeleton-title"></div>
+                            <div class="skeleton-box skeleton-text"></div>
+                            <div class="skeleton-box skeleton-btn"></div>
+                        </div>
+                    </div>
                     <div class="news-skeleton-card">
                         <div class="skeleton-box skeleton-img"></div>
                         <div class="skeleton-body">
@@ -940,6 +958,6 @@
     </div>
 
     <!-- Interactive JavaScript -->
-    <script src="assets/js/main.js?v=4"></script>
+    <script src="assets/js/main.js?v=5"></script>
 </body>
 </html>
