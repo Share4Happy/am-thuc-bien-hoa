@@ -133,4 +133,142 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 7. WordPress News API Integration (Category 207 - Share4Happy)
+    function initNewsSection() {
+        const newsSection = document.getElementById('news');
+        const container = document.getElementById('news-content-container');
+        const footerAction = document.getElementById('news-footer-action');
+        if (!newsSection || !container) return;
+
+        const categoryId = newsSection.getAttribute('data-category-id') || '158';
+        const apiUrl = `https://share4happy.com/wp-json/wp/v2/posts?categories=${categoryId}&_embed&per_page=6`;
+        const wpHomeUrl = 'https://share4happy.com/';
+
+        let isFetched = false;
+
+        function decodeHtml(html) {
+            const txt = document.createElement('textarea');
+            txt.innerHTML = html || '';
+            return txt.value;
+        }
+
+        function stripHtml(html) {
+            const tmp = document.createElement('div');
+            tmp.innerHTML = html || '';
+            return tmp.textContent || tmp.innerText || '';
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            const d = new Date(dateStr);
+            if (isNaN(d.getTime())) return dateStr;
+            return d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        }
+
+        function renderPosts(posts) {
+            let html = '<div class="news-grid">';
+            posts.forEach(post => {
+                const rawTitle = decodeHtml(post.title?.rendered || 'Bài viết không có tiêu đề');
+                const link = post.link || wpHomeUrl;
+                const date = formatDate(post.date);
+                const rawExcerpt = stripHtml(post.excerpt?.rendered || '');
+                const excerpt = rawExcerpt.length > 120 ? rawExcerpt.substring(0, 117) + '...' : (rawExcerpt || 'Xem chi tiết bài viết hấp dẫn trên chuyên trang Share4Happy...');
+
+                let imageUrl = '';
+                const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0];
+                if (featuredMedia) {
+                    imageUrl = featuredMedia.media_details?.sizes?.medium_large?.source_url ||
+                               featuredMedia.media_details?.sizes?.medium?.source_url ||
+                               featuredMedia.source_url || '';
+                }
+                if (!imageUrl) {
+                    imageUrl = 'assets/images/categories/local_soup.jpg';
+                }
+
+                html += `
+                    <article class="news-card">
+                        <div class="news-card-img-box">
+                            <span class="news-card-badge">Bài Viết Mới</span>
+                            <img src="${imageUrl}" alt="${rawTitle.replace(/"/g, '&quot;')}" loading="lazy" decoding="async">
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-card-date"><i class="ri-calendar-line"></i> ${date}</div>
+                            <h3 class="news-card-title">
+                                <a href="${link}" target="_blank" rel="noopener noreferrer">${rawTitle}</a>
+                            </h3>
+                            <p class="news-card-excerpt">${excerpt}</p>
+                            <a href="${link}" target="_blank" rel="noopener noreferrer" class="news-card-link">
+                                Đọc tiếp <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+                `;
+            });
+            html += '</div>';
+            container.innerHTML = html;
+
+            if (footerAction) {
+                footerAction.style.display = 'flex';
+                footerAction.innerHTML = `
+                    <a href="${wpHomeUrl}" target="_blank" rel="noopener noreferrer" class="btn-pill-dark">
+                        XEM THÊM TRÊN SHARE4HAPPY <i class="ri-external-link-line"></i>
+                    </a>
+                `;
+            }
+        }
+
+        function renderEmptyState() {
+            container.innerHTML = `
+                <div class="news-empty-container">
+                    <div class="news-empty-icon-circle">
+                        <i class="ri-article-line"></i>
+                    </div>
+                    <h3 class="news-empty-title">Chuyên mục đang chuẩn bị các bài viết mới nhất</h3>
+                    <p class="news-empty-desc">
+                        Những bài viết trải nghiệm ẩm thực, quán ngon gia truyền và cẩm nang khám phá đang được đội ngũ biên tập hoàn thiện và sẽ xuất hiện sớm nhất tại đây!
+                    </p>
+                    <div class="news-empty-actions">
+                        <a href="${wpHomeUrl}" target="_blank" rel="noopener noreferrer" class="btn-pill-dark">
+                            <i class="ri-external-link-line"></i> XEM BÀI VIẾT TRÊN SHARE4HAPPY
+                        </a>
+                    </div>
+                </div>
+            `;
+            if (footerAction) {
+                footerAction.style.display = 'none';
+            }
+        }
+
+        async function fetchPosts() {
+            if (isFetched) return;
+            isFetched = true;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'GET',
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const posts = await response.json();
+                if (Array.isArray(posts) && posts.length > 0) {
+                    renderPosts(posts);
+                } else {
+                    renderEmptyState();
+                }
+            } catch (err) {
+                console.warn('WordPress API info:', err);
+                renderEmptyState();
+            }
+        }
+
+        // Call fetchPosts directly to load content seamlessly
+        fetchPosts();
+    }
+
+    initNewsSection();
 });
