@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const footerAction = document.getElementById('news-footer-action');
         if (!newsSection || !container) return;
 
-        const categoryId = newsSection.getAttribute('data-category-id') || '158';
+        const categoryId = newsSection.getAttribute('data-category-id') || '207';
         const apiUrl = `https://share4happy.com/wp-json/wp/v2/posts?categories=${categoryId}&_embed&per_page=5`;
         const wpHomeUrl = 'https://share4happy.com/';
 
