@@ -186,14 +186,20 @@ function testLandingKhac() {
 }
 
 /**
- * Làm sạch chuỗi văn bản đầu vào
+ * Làm sạch chuỗi văn bản đầu vào & Chống Formula Injection (CSV Injection) trong Google Sheets
  */
 function safeText_(value, maxLen) {
-  return String(value == null ? '' : value)
+  let text = String(value == null ? '' : value)
     .replace(/[\u0000-\u001f\u007f]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
     .slice(0, maxLen);
+
+  // Ngăn chặn Formula Injection: nếu chuỗi bắt đầu bằng =, +, -, @ thì thêm dấu ' phía trước
+  if (/^[=+@\-\t\r]/.test(text)) {
+    text = "'" + text;
+  }
+  return text;
 }
 
 /**

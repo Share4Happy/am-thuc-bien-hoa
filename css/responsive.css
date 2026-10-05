@@ -633,59 +633,86 @@
         line-height: 1.6;
     }
 
-    /* 11. Section Gửi Đánh Giá */
+    /* 11. Section Bảng Thu Thập Thông Tin / Tư Vấn */
+    .feedback-section {
+        padding: 42px 0 50px;
+        scroll-margin-top: 75px;
+    }
+
+    .feedback-header {
+        margin-bottom: 24px;
+    }
+
     .feedback-title {
-        font-size: 1.6rem;
-        margin-bottom: 22px;
-    }
-
-    .feedback-card {
-        padding: 22px 16px;
-        border-radius: var(--radius-lg);
-    }
-
-    .feedback-rating-row {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+        font-size: clamp(1.4rem, 5.5vw, 1.75rem);
         margin-bottom: 10px;
     }
 
-    .feedback-rating-question {
+    .feedback-subtitle {
+        font-size: 0.86rem;
+        line-height: 1.55;
+    }
+
+    .feedback-card {
+        padding: 24px 16px;
+        border-radius: var(--radius-lg);
+        box-shadow: 0 8px 24px rgba(35, 23, 19, 0.06);
+    }
+
+    .lead-form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .input-with-icon {
+        width: 100%;
+    }
+
+    .form-control {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
         font-size: 0.9rem;
+        padding: 12px 14px 12px 42px;
+        border-radius: 8px;
     }
 
-    .feedback-interactive-stars {
-        font-size: 1.6rem;
-        gap: 8px;
-        justify-content: center;
+    .form-textarea {
+        min-height: 85px;
     }
 
-    .feedback-instruction {
-        text-align: center;
-        font-size: 0.84rem;
-        margin-bottom: 16px;
+    .form-consent-row {
+        margin: 16px 0 20px;
     }
 
-    .feedback-input-line {
+    .consent-text {
+        font-size: 0.8rem;
+        line-height: 1.45;
+    }
+
+    .btn-lead-submit {
+        width: 100%;
+        min-height: 48px;
         font-size: 0.88rem;
-        padding: 8px 36px 8px 0;
-    }
-
-    .feedback-send-btn {
-        font-size: 1.3rem;
+        padding: 12px 16px;
+        border-radius: var(--radius-pill);
     }
 
     .feedback-subtext {
-        margin-top: 24px;
+        margin-top: 22px;
     }
 
     .feedback-subtext-title {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 
     .feedback-subtext-desc {
-        font-size: 0.88rem;
+        font-size: 0.82rem;
+        line-height: 1.5;
     }
 
     /* 12. Footer */

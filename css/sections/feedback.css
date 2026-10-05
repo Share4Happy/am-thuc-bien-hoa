@@ -5,6 +5,7 @@
     position: relative;
     background-color: var(--bg-page);
     padding: 60px 0 75px;
+    scroll-margin-top: 85px;
 }
 
 .feedback-header {
@@ -115,7 +116,9 @@
 }
 
 .form-control {
+    display: block;
     width: 100%;
+    box-sizing: border-box;
     padding: 12px 14px 12px 42px;
     background: #FAF7F2;
     border: 1.5px solid #E6DDD5;
