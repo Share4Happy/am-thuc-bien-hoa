@@ -1,0 +1,113 @@
+/* ==========================================================================
+   5. "QUÁN ĂN ĐỊA PHƯƠNG" (Image 5)
+   ========================================================================== */
+.restaurants-section {
+    position: relative;
+    background-color: var(--bg-page);
+    padding: 40px 0 60px;
+}
+
+/* Panoramic Banner at Top of Section 5 */
+.panoramic-banner-wrapper {
+    width: 100%;
+    height: 380px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.panoramic-banner-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 5 Restaurants Grid */
+.restaurants-5-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.restaurant-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.restaurant-img-box {
+    height: 200px;
+    overflow: hidden;
+    background-color: #EDE6DD;
+}
+
+.restaurant-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.restaurant-card:hover .restaurant-img-box img {
+    transform: scale(1.06);
+}
+
+.restaurant-card-body {
+    background-color: var(--color-dark-card);
+    color: #FFFFFF;
+    padding: 18px 16px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.restaurant-card-title {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+
+.restaurant-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 8px;
+    padding-right: 28px;
+}
+
+.restaurant-info-item {
+    font-size: 0.8rem;
+    color: var(--text-light-muted);
+    line-height: 1.45;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.restaurant-info-item i {
+    color: var(--color-gold);
+    font-size: 0.85rem;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.restaurant-card-body .circle-arrow-btn {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+}
+

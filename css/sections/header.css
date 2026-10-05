@@ -1,0 +1,174 @@
+/* ==========================================================================
+   1. HEADER & HERO SECTION (Image 1)
+   ========================================================================== */
+.hero-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('../../asset/images/hero/Gemini_Generated_Image_3226m33226m33226.png') center center / cover no-repeat;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(180deg, rgba(10, 8, 7, 0.65) 0%, rgba(10, 8, 7, 0.25) 60%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Top Transparent Overlay Navigation */
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 0;
+    transition: var(--transition);
+}
+
+.site-nav.nav-scrolled {
+    background: rgba(20, 14, 11, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 12px 0;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.45);
+    border-bottom: 1px solid rgba(255, 184, 0, 0.2);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.site-nav.nav-scrolled .nav-inner {
+    justify-content: space-between;
+}
+
+.nav-brand-mobile {
+    display: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.3px;
+}
+
+.site-nav.nav-scrolled .nav-brand-mobile {
+    display: block;
+}
+
+.nav-brand-mobile span {
+    color: var(--color-gold);
+}
+
+/* Sleek Floating Glassmorphic Nav Island */
+.nav-island {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(22, 17, 14, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 6px 8px 6px 22px;
+    border-radius: var(--radius-pill);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 184, 0, 0.1);
+    transition: var(--transition);
+}
+
+.site-nav.nav-scrolled .nav-island {
+    background: rgba(30, 22, 18, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+}
+
+.nav-links-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link-item {
+    color: #FFFFFF;
+    font-size: 0.92rem;
+    font-weight: 600;
+    position: relative;
+    padding: 8px 4px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+    letter-spacing: 0.2px;
+}
+
+.nav-link-item:hover {
+    color: var(--color-gold);
+}
+
+.nav-link-item.active {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.nav-link-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    right: 4px;
+    height: 3px;
+    background-color: var(--color-gold);
+    border-radius: var(--radius-pill);
+    box-shadow: 0 0 8px rgba(255, 184, 0, 0.6);
+}
+
+.btn-nav-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #FFB800 0%, #FFA000 100%);
+    color: #1A110D;
+    font-size: 0.85rem;
+    font-weight: 800;
+    padding: 9px 20px;
+    border-radius: var(--radius-pill);
+    box-shadow: 0 4px 14px rgba(255, 184, 0, 0.35);
+    transition: var(--transition);
+    letter-spacing: 0.3px;
+}
+
+.btn-nav-contact i {
+    font-size: 0.95rem;
+    color: #1A110D;
+    transition: transform 0.25s ease;
+}
+
+.btn-nav-contact:hover {
+    background: linear-gradient(135deg, #FFC72C 0%, #FFB000 100%);
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 184, 0, 0.5);
+}
+
+.btn-nav-contact:hover i {
+    transform: translateX(3px);
+}
+
+.mobile-nav-toggle {
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+}
+
+

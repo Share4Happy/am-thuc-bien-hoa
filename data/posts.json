@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "date": "2026-09-28T09:00:00",
+    "link": "https://share4happy.com/category/am-thuc-bien-hoa/",
+    "title": {
+      "rendered": "Top 10 Quán Chả Lụi Biên Hòa Ngon Nức Tiếng Bạn Phải Thử Một Lần"
+    },
+    "excerpt": {
+      "rendered": "Khám phá hương vị giòn rụm của chả lụi cuốn cùng rau sống tươi ngon và chén nước sốt tương đậu đậm đà đặc trưng khó quên tại Biên Hòa."
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "asset/images/streetfood/cha_lui.jpg",
+          "media_details": {
+            "sizes": {
+              "medium_large": {
+                "source_url": "asset/images/streetfood/cha_lui.jpg"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "date": "2026-09-24T14:30:00",
+    "link": "https://share4happy.com/category/am-thuc-bien-hoa/",
+    "title": {
+      "rendered": "Khám Phá Hương Vị Lẩu Tôm Năm Ri - Biểu Tượng Ẩm Thực Đất Biên Hòa"
+    },
+    "excerpt": {
+      "rendered": "Nước lẩu chua cay thanh ngọt cùng những chú tôm càng xanh tươi rói chắc thịt đã làm nên thương hiệu ẩm thực danh bất hư truyền của Đồng Nai."
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "asset/images/restaurants/lau_tom_5ri.jpg",
+          "media_details": {
+            "sizes": {
+              "medium_large": {
+                "source_url": "asset/images/restaurants/lau_tom_5ri.jpg"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "date": "2026-09-18T16:00:00",
+    "link": "https://share4happy.com/category/am-thuc-bien-hoa/",
+    "title": {
+      "rendered": "Về Làng Bưởi Tân Triều: Thưởng Thức Gỏi Bưởi & Nhâm Nhi Chén Rượu Nồng"
+    },
+    "excerpt": {
+      "rendered": "Đến với cù lao xanh mát rượi, nhâm nhi gỏi bưởi tôm thịt thanh mát kết hợp cùng chén rượu bưởi êm dịu làm say lòng bất cứ du khách phương xa nào."
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "asset/images/specialties/buoi_tan_trieu.jpg",
+          "media_details": {
+            "sizes": {
+              "medium_large": {
+                "source_url": "asset/images/specialties/buoi_tan_trieu.jpg"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "date": "2026-09-12T10:15:00",
+    "link": "https://share4happy.com/category/am-thuc-bien-hoa/",
+    "title": {
+      "rendered": "Cẩm Nang Ăn Đêm Biên Hòa: Những Điểm Hẹn Ẩm Thực Không Thể Bỏ Lỡ"
+    },
+    "excerpt": {
+      "rendered": "Biên Hòa về đêm nhộn nhịp với những xe bánh mì kẹp thịt nóng giòn, chè bưởi thơm lừng và hàng quán vỉa hè rôm rả tiếng cười dọc bờ sông Đồng Nai."
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "asset/images/categories/city_night.jpg",
+          "media_details": {
+            "sizes": {
+              "medium_large": {
+                "source_url": "asset/images/categories/city_night.jpg"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "date": "2026-09-05T08:45:00",
+    "link": "https://share4happy.com/category/am-thuc-bien-hoa/",
+    "title": {
+      "rendered": "Hủ Tiếu Cá & Canh Chua Lá Giang: Vị Ngon Bình Dị Khắc Sâu Ký Ức"
+    },
+    "excerpt": {
+      "rendered": "Những món ăn dân dã gắn liền với nhịp sống và văn hóa ẩm thực giao thoa đầy tự hào của người dân xứ bưởi qua nhiều thế hệ lưu truyền."
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "asset/images/specialties/canh_chua_la_giang.jpg",
+          "media_details": {
+            "sizes": {
+              "medium_large": {
+                "source_url": "asset/images/specialties/canh_chua_la_giang.jpg"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+]

@@ -19,23 +19,19 @@
   "specialties": [
     {
       "name": "Bưởi Tân Triều",
-      "image": "assets/images/specialties/buoi_tan_trieu.jpg",
-      "svg": "assets/images/specialties/buoi_tan_trieu.svg"
+      "image": "asset/images/specialties/buoi_tan_trieu.jpg"
     },
     {
       "name": "Mít Tố Nữ",
-      "image": "assets/images/specialties/mit_to_nu.jpg",
-      "svg": "assets/images/specialties/mit_to_nu.svg"
+      "image": "asset/images/specialties/mit_to_nu.jpg"
     },
     {
       "name": "Rượu bưởi",
-      "image": "assets/images/specialties/ruou_buoi.jpg",
-      "svg": "assets/images/specialties/ruou_buoi.svg"
+      "image": "asset/images/specialties/ruou_buoi.jpg"
     },
     {
       "name": "Canh chua lá giang",
-      "image": "assets/images/specialties/canh_chua_la_giang.jpg",
-      "svg": "assets/images/specialties/canh_chua_la_giang.svg"
+      "image": "asset/images/specialties/canh_chua_la_giang.jpg"
     }
   ],
   "reviews": [

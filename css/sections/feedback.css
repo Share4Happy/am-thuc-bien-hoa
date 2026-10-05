@@ -1,0 +1,117 @@
+/* ==========================================================================
+   9. "GỬI ĐÁNH GIÁ CHO CHÚNG TÔI" (Image 9)
+   ========================================================================== */
+.feedback-section {
+    position: relative;
+    background-color: var(--bg-page);
+    padding: 40px 0 60px;
+}
+
+.feedback-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+}
+
+.feedback-card {
+    max-width: 620px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    border-radius: var(--radius-xl);
+    padding: 32px 36px;
+    box-shadow: 0 8px 30px rgba(35, 23, 19, 0.08);
+}
+
+.feedback-rating-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.feedback-rating-question {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.feedback-interactive-stars {
+    display: flex;
+    gap: 4px;
+    font-size: 1.3rem;
+    color: #D3CBC3;
+    cursor: pointer;
+}
+
+.feedback-interactive-stars i:hover,
+.feedback-interactive-stars i.active {
+    color: var(--color-gold);
+}
+
+.feedback-instruction {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #173322;
+    margin-bottom: 22px;
+}
+
+.feedback-input-box {
+    position: relative;
+    width: 100%;
+}
+
+.feedback-input-line {
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #2B1D17;
+    padding: 8px 40px 8px 0;
+    background: transparent;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.feedback-input-line::placeholder {
+    color: #A99F98;
+    font-size: 0.88rem;
+}
+
+.feedback-send-btn {
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    background: none;
+    border: none;
+    color: var(--color-dark);
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-send-btn:hover {
+    color: var(--color-gold);
+    transform: translateX(3px);
+}
+
+.feedback-subtext {
+    text-align: center;
+    margin-top: 36px;
+    color: var(--text-primary);
+}
+
+.feedback-subtext-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.feedback-subtext-desc {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #554C46;
+}
+

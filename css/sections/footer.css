@@ -1,0 +1,116 @@
+/* ==========================================================================
+   10. FOOTER (Image 9)
+   ========================================================================== */
+.site-footer-dark {
+    background-color: #211510;
+    color: #FFFFFF;
+    padding: 48px 0 36px;
+    border-top: 3px solid var(--color-gold);
+}
+
+.footer-center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-brand-heading {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--color-gold);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.footer-contact-items-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    font-size: 0.95rem;
+    color: #E5DDD7;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.footer-contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-contact-item i {
+    font-size: 1.15rem;
+    color: var(--color-gold);
+}
+
+.footer-divider-bar {
+    width: 1px;
+    height: 18px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-social-icons-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-circle-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.social-circle-btn:hover {
+    transform: translateY(-3px) scale(1.08);
+}
+
+.social-circle-btn.fb {
+    background-color: #1877F2;
+}
+
+.social-circle-btn.insta {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-circle-btn.tiktok {
+    background-color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Floating Hotline */
+.floating-call {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+}
+
+.btn-floating-call {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    transition: var(--transition);
+}
+
+.btn-floating-call:hover {
+    transform: scale(1.1);
+    background-color: #FFF;
+}
+

@@ -1,0 +1,27 @@
+/* ==========================================================================
+   ẨM THỰC BIÊN HÒA - MAIN STYLESHEET ENTRY POINT
+   Aggregates design tokens, base styles, reusable components, and section modules.
+   ========================================================================== */
+
+/* 1. Core & Foundation */
+@import 'variables.css';
+@import 'reset.css';
+@import 'layout.css';
+@import 'components.css';
+
+/* 2. Section Styles (1:1 per HTML section) */
+@import 'sections/header.css';
+@import 'sections/hero.css';
+@import 'sections/explore.css';
+@import 'sections/streetfood.css';
+@import 'sections/spaces.css';
+@import 'sections/restaurants.css';
+@import 'sections/specialties.css';
+@import 'sections/story.css';
+@import 'sections/news.css';
+@import 'sections/reviews.css';
+@import 'sections/feedback.css';
+@import 'sections/footer.css';
+
+/* 3. Responsive Overrides (Laptop, Tablet, Mobile) */
+@import 'responsive.css';

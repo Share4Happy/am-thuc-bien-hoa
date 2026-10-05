@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://amthucbienhoa.share4happy.com/</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://amthucbienhoa.share4happy.com/asset/images/categories/cha_lui.jpg</image:loc>
+            <image:title>Ẩm thực đường phố Biên Hòa - Chả Lụi</image:title>
+            <image:caption>Khám phá món ngon ẩm thực đường phố đặc sản Biên Hòa</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://amthucbienhoa.share4happy.com/asset/images/specialties/buoi_tan_trieu.jpg</image:loc>
+            <image:title>Đặc sản Bưởi Tân Triều Biên Hòa</image:title>
+            <image:caption>Đặc sản bưởi đường lá cam Tân Triều nức tiếng xứ Biên Hòa</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://amthucbienhoa.share4happy.com/asset/images/specialties/mit_to_nu.jpg</image:loc>
+            <image:title>Mít Tố Nữ Biên Hòa Đồng Nai</image:title>
+            <image:caption>Trái cây đặc sản thơm lừng miền Đông Nam Bộ</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://amthucbienhoa.share4happy.com/asset/images/specialties/ruou_buoi.jpg</image:loc>
+            <image:title>Rượu Bưởi Nhân Hòa Tân Triều</image:title>
+            <image:caption>Thức uống danh tiếng làm quà tặng khi ghé thăm Biên Hòa</image:caption>
+        </image:image>
+    </url>
+</urlset>

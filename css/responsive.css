@@ -1,0 +1,758 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN (Desktop >=1280px, Laptop 1024-1279px, Tablet 768-1023px, Mobile <768px)
+   ========================================================================== */
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1279px) {
+    .hero-main-title {
+        font-size: 3rem;
+    }
+    
+    .explore-grid {
+        gap: 16px;
+    }
+
+    .dishes-5-grid, .restaurants-5-grid {
+        gap: 12px;
+    }
+
+    .story-grid {
+        gap: 30px;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    .hero-content-area {
+        padding: 110px 0 60px;
+    }
+
+    .hero-floating-card {
+        max-width: 500px;
+        padding: 36px 30px;
+    }
+
+    .hero-main-title {
+        font-size: 2.7rem;
+    }
+
+    .explore-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .showcase-slider-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-item.side {
+        display: none;
+    }
+
+    .showcase-item.center {
+        height: 280px;
+    }
+
+    .dishes-5-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+
+    .spaces-3-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .spaces-footer-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .city-quote {
+        justify-content: center;
+    }
+
+    .panoramic-banner-wrapper {
+        height: 240px;
+    }
+
+    .restaurants-5-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .specialties-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card {
+        flex: 0 0 290px;
+        width: 290px;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-collage-grid {
+        height: 360px;
+    }
+
+    .reviews-3-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-contact-items-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-divider-bar {
+        display: none;
+    }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+    /* Base Container & Spacing */
+    .container {
+        padding: 0 16px;
+    }
+
+    .section-spacing,
+    .explore-section,
+    .street-food-section,
+    .city-spaces-section,
+    .restaurants-section,
+    .specialties-section,
+    .story-section,
+    .news-section,
+    .reviews-section,
+    .feedback-section {
+        padding: 42px 0 46px;
+    }
+
+    .section-header-centered {
+        margin: 26px 0 20px;
+        gap: 8px;
+    }
+
+    .section-header-centered h2 {
+        font-size: clamp(1.3rem, 5.2vw, 1.55rem);
+    }
+
+    .section-header-centered i {
+        font-size: 1.3rem;
+    }
+
+    .btn-center-wrapper {
+        margin-top: 24px;
+    }
+
+    /* 1. Header & Navigation */
+    .site-nav {
+        padding: 14px 0;
+        background: rgba(22, 15, 12, 0.85);
+        backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .nav-island {
+        display: contents;
+    }
+
+    .nav-brand-mobile {
+        display: block;
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: #FFFFFF;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-brand-mobile span {
+        color: var(--color-gold);
+    }
+
+    .mobile-nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #FFFFFF;
+        font-size: 1.4rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-nav-contact {
+        display: none;
+    }
+
+    .nav-links-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(26, 17, 13, 0.98);
+        backdrop-filter: blur(16px);
+        padding: 20px 16px;
+        flex-direction: column;
+        gap: 8px;
+        border-bottom: 2px solid var(--color-gold);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links-list.open {
+        display: flex;
+        animation: mobileNavFade 0.25s ease-out;
+    }
+
+    @keyframes mobileNavFade {
+        from { opacity: 0; transform: translateY(-8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav-link-item {
+        font-size: 1rem;
+        padding: 10px 14px;
+        border-radius: var(--radius-sm);
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-link-item.active::after {
+        display: none;
+    }
+
+    .nav-link-item.active {
+        color: var(--color-gold);
+        background: rgba(255, 184, 0, 0.1);
+    }
+
+    /* 2. Hero Section */
+    .hero-wrapper {
+        min-height: auto;
+    }
+
+    .hero-content-area {
+        padding: 85px 0 45px;
+    }
+
+    .hero-floating-card {
+        max-width: 100%;
+        padding: 26px 18px;
+        border-radius: var(--radius-lg);
+    }
+
+    .hero-main-title {
+        font-size: clamp(2rem, 7.5vw, 2.4rem);
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .hero-slogan {
+        font-size: 0.82rem;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+    .hero-description {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        margin-bottom: 22px;
+    }
+
+    .hero-btn-primary {
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+        font-size: 0.88rem;
+        margin-bottom: 12px;
+    }
+
+    .hero-btn-group-outline {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .hero-btn-outline {
+        justify-content: center;
+        padding: 11px 8px;
+        font-size: 0.74rem;
+        text-align: center;
+        min-height: 44px;
+    }
+
+    /* 3. Section Ăn Gì */
+    .explore-header {
+        margin-bottom: 24px;
+    }
+
+    .explore-title {
+        font-size: clamp(1.7rem, 6vw, 2.1rem);
+        margin-bottom: 6px;
+    }
+
+    .explore-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .explore-card-img-wrapper {
+        height: 175px;
+    }
+
+    .explore-card-body {
+        padding: 18px 16px 20px;
+    }
+
+    .explore-card-body .btn-pill-dark {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    /* 4. Section Ẩm Thực Đường Phố */
+    .showcase-slider-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-item.side {
+        display: none;
+    }
+
+    .showcase-item.center {
+        height: 210px;
+    }
+
+    .slider-arrow-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .slider-arrow-btn.prev {
+        left: 10px;
+    }
+
+    .slider-arrow-btn.next {
+        right: 10px;
+    }
+
+    .dishes-5-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .dish-small-card {
+        border-radius: var(--radius-md);
+    }
+
+    .dish-small-img-box {
+        height: 115px;
+    }
+
+    .dish-small-body {
+        padding: 10px 8px 10px;
+    }
+
+    .dish-small-name {
+        font-size: 0.82rem;
+        margin-bottom: 6px;
+    }
+
+    .dish-small-actions {
+        font-size: 0.72rem;
+        gap: 6px;
+    }
+
+    /* 5. Section Không Gian Thành Phố */
+    .spaces-3-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .space-img-box {
+        height: 180px;
+    }
+
+    .space-card-body {
+        padding: 18px 16px;
+    }
+
+    .space-card-body .circle-arrow-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .spaces-footer-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .city-quote {
+        font-size: 0.88rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* 6. Section Quán Ăn Địa Phương */
+    .panoramic-banner-wrapper {
+        height: 165px;
+        border-radius: var(--radius-md);
+    }
+
+    .restaurants-5-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .restaurant-img-box {
+        height: 160px;
+    }
+
+    .restaurant-card-body {
+        padding: 16px 14px;
+    }
+
+    .restaurant-card-title {
+        font-size: 0.95rem;
+    }
+
+    .restaurant-info-item {
+        font-size: 0.8rem;
+        line-height: 1.45;
+    }
+
+    .restaurant-card-body .circle-arrow-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    /* 7. Section Đặc Sản Biên Hòa */
+    .specialties-header {
+        margin-bottom: 20px;
+    }
+
+    .specialties-title {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .specialties-desc {
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+
+    .specialties-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .specialties-2x2-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .specialty-img-box {
+        height: 110px;
+    }
+
+    .specialty-bottom-bar {
+        padding: 8px 10px;
+    }
+
+    .specialty-name {
+        font-size: 0.8rem;
+    }
+
+    .specialty-featured-img-box {
+        height: 220px;
+    }
+
+    /* 8. Section Hành Trình Kể Chuyện */
+    .story-container-card {
+        padding: 24px 18px;
+        border-radius: var(--radius-lg);
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .story-title {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        margin-bottom: 8px;
+    }
+
+    .story-subheading {
+        font-size: 0.88rem;
+        margin-bottom: 14px;
+    }
+
+    .story-paragraphs p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .btn-story-action {
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+        font-size: 0.86rem;
+    }
+
+    .story-collage-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        height: auto;
+    }
+
+    .story-photo-left {
+        height: 190px;
+    }
+
+    .story-photo-right-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        height: 120px;
+    }
+
+    .story-photo-item {
+        height: 100%;
+    }
+
+    /* 9. Section Tin Tức */
+    .news-subtitle {
+        font-size: 0.88rem;
+        margin-bottom: 22px;
+    }
+
+    .news-empty-container {
+        padding: 30px 18px;
+        border-radius: var(--radius-lg);
+    }
+
+    .news-empty-icon-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+        margin-bottom: 14px;
+    }
+
+    .news-empty-title {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .news-empty-desc {
+        font-size: 0.86rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .news-subscribe-form {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-radius: var(--radius-md);
+    }
+
+    .news-subscribe-form input {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .news-subscribe-form .btn-pill-dark {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+    }
+
+    .news-card {
+        flex: 0 0 260px;
+        width: 260px;
+    }
+
+    /* 10. Section Đánh Giá Thực Khách */
+    .reviews-header {
+        margin-bottom: 26px;
+    }
+
+    .reviews-title {
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+    }
+
+    .reviews-subtitle {
+        font-size: 0.92rem;
+    }
+
+    .reviews-3-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 26px;
+    }
+
+    .review-card {
+        padding: 20px 18px;
+        border-radius: var(--radius-md);
+    }
+
+    .review-card-text {
+        font-size: 0.86rem;
+        margin: 14px 0;
+        line-height: 1.6;
+    }
+
+    /* 11. Section Gửi Đánh Giá */
+    .feedback-title {
+        font-size: 1.6rem;
+        margin-bottom: 22px;
+    }
+
+    .feedback-card {
+        padding: 22px 16px;
+        border-radius: var(--radius-lg);
+    }
+
+    .feedback-rating-row {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .feedback-rating-question {
+        font-size: 0.9rem;
+    }
+
+    .feedback-interactive-stars {
+        font-size: 1.6rem;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .feedback-instruction {
+        text-align: center;
+        font-size: 0.84rem;
+        margin-bottom: 16px;
+    }
+
+    .feedback-input-line {
+        font-size: 0.88rem;
+        padding: 8px 36px 8px 0;
+    }
+
+    .feedback-send-btn {
+        font-size: 1.3rem;
+    }
+
+    .feedback-subtext {
+        margin-top: 24px;
+    }
+
+    .feedback-subtext-title {
+        font-size: 0.9rem;
+    }
+
+    .feedback-subtext-desc {
+        font-size: 0.88rem;
+    }
+
+    /* 12. Footer */
+    .site-footer-dark {
+        padding: 40px 0 28px;
+    }
+
+    .footer-brand-heading {
+        font-size: 1.8rem;
+        margin-bottom: 18px;
+    }
+
+    .footer-contact-items-row {
+        flex-direction: column;
+        gap: 12px;
+        font-size: 0.88rem;
+        margin-bottom: 22px;
+    }
+
+    .footer-divider-bar {
+        display: none;
+    }
+
+    .footer-social-icons-row {
+        gap: 14px;
+    }
+
+    .social-circle-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+
+    /* Floating Hotline */
+    .floating-call {
+        bottom: 18px;
+        right: 18px;
+    }
+
+    .btn-floating-call {
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Small Mobile (< 400px e.g. iPhone SE) */
+@media (max-width: 399px) {
+    .hero-btn-group-outline {
+        grid-template-columns: 1fr;
+    }
+
+    .dishes-5-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specialties-2x2-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-photo-right-col {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .story-photo-item {
+        height: 120px;
+    }
+}
+

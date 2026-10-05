@@ -1,0 +1,17 @@
+# robots.txt for Ẩm Thực Biên Hòa
+# Domain: https://amthucbienhoa.share4happy.com/
+
+User-agent: *
+Allow: /
+Allow: /asset/
+Allow: /data/
+Disallow: /.git/
+Disallow: /.env*
+Disallow: /*.bak$
+Disallow: /*.sql$
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 1
+
+# Sitemap declaration
+Sitemap: https://amthucbienhoa.share4happy.com/sitemap.xml

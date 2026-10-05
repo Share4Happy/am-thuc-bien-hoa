@@ -1,0 +1,137 @@
+/* ==========================================================================
+   6. "ĐẶC SẢN BIÊN HÒA" (Image 6)
+   ========================================================================== */
+.specialties-section {
+    position: relative;
+    background-color: var(--bg-page);
+    padding: 50px 0 60px;
+}
+
+.specialties-header {
+    margin-bottom: 28px;
+}
+
+.specialties-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.specialties-title i {
+    color: var(--text-primary);
+}
+
+.specialties-desc {
+    font-size: 0.95rem;
+    color: #38302A;
+    line-height: 1.65;
+    max-width: 620px;
+}
+
+.specialties-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+/* 2x2 Grid of 4 Specialty Cards */
+.specialties-2x2-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.specialty-item-card {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.specialty-item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.specialty-img-box {
+    height: 185px;
+    overflow: hidden;
+    background-color: #ECE5DC;
+}
+
+.specialty-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.specialty-item-card:hover .specialty-img-box img {
+    transform: scale(1.06);
+}
+
+.specialty-bottom-bar {
+    background-color: var(--color-dark-card);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.specialty-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+/* Right Featured Large Image Showcase */
+.specialties-featured-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.specialty-featured-img-box {
+    width: 100%;
+    height: 420px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    position: relative;
+    background-color: #EDE6DD;
+}
+
+.specialty-featured-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider pagination bar at bottom of featured image */
+.specialty-indicator-line {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+}
+
+.specialty-indicator-line-active {
+    width: 40%;
+    height: 100%;
+    background: var(--color-gold);
+    border-radius: var(--radius-pill);
+}
+

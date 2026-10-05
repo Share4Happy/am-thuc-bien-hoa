@@ -1,0 +1,154 @@
+/* ==========================================================================
+   3. "ẨM THỰC ĐƯỜNG PHỐ" (Image 3)
+   ========================================================================== */
+.street-food-section {
+    position: relative;
+    background-color: var(--bg-page);
+    padding: 40px 0 60px;
+}
+
+/* Top Carousel 3 Featured Showcase Photos */
+.showcase-slider-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.showcase-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    background-color: #EDE6DD;
+}
+
+.showcase-item.side {
+    height: 260px;
+}
+
+.showcase-item.center {
+    height: 310px;
+}
+
+.showcase-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Circular Slider Navigation Arrows */
+.slider-arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(35, 23, 19, 0.85);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.slider-arrow-btn:hover {
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+}
+
+.slider-arrow-btn.prev {
+    left: 18px;
+}
+
+.slider-arrow-btn.next {
+    right: 18px;
+}
+
+/* 5 Dish Cards Grid */
+.dishes-5-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.dish-small-card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.dish-small-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.dish-small-img-box {
+    height: 195px;
+    overflow: hidden;
+    background-color: #EDE6DD;
+}
+
+.dish-small-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.dish-small-card:hover .dish-small-img-box img {
+    transform: scale(1.06);
+}
+
+.dish-small-body {
+    padding: 16px 12px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.dish-small-name {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dish-small-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.dish-small-action-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.dish-small-action-item i {
+    font-size: 0.85rem;
+    color: #8C827A;
+}
+
+.dish-small-action-item:hover {
+    color: var(--color-dark);
+}
+

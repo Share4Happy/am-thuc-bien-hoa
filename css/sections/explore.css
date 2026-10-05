@@ -1,0 +1,110 @@
+/* ==========================================================================
+   2. "ĐẾN BIÊN HÒA ĂN GÌ?" (Image 2)
+   ========================================================================== */
+.explore-section {
+    position: relative;
+    background-color: var(--bg-page);
+    background-image: url('../../asset/images/bg_sketch.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding: 85px 0 75px;
+    overflow: hidden;
+}
+
+.explore-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.explore-header {
+    margin-bottom: 38px;
+}
+
+.explore-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.explore-subtitle {
+    font-size: 1.05rem;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+/* 4 Feature Cards Grid */
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.explore-card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.explore-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.explore-card-img-wrapper {
+    height: 235px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ECE5DC;
+}
+
+.explore-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.explore-card:hover .explore-card-img {
+    transform: scale(1.05);
+}
+
+.explore-card-body {
+    padding: 24px 20px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.explore-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.explore-card-title i {
+    font-size: 1.18rem;
+}
+
+.explore-card-desc {
+    font-size: 0.92rem;
+    color: var(--text-sub);
+    line-height: 1.55;
+    margin-bottom: 22px;
+    flex-grow: 1;
+}
+

@@ -1,0 +1,27 @@
+/*
+  # Modern Security Headers
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=(), screen-wake-lock=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+  # Strict Content Security Policy (Zero inline scripts, tightly scoped origins)
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https: blob:; connect-src 'self' https://amthucbienhoa.share4happy.com https://share4happy.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;
+
+# Block access to hidden & sensitive files
+/.git/*
+  HTTP/1.1 403 Forbidden
+/.env*
+  HTTP/1.1 403 Forbidden
+
+# Static Asset Caching with Immutability
+/asset/*
+  Cache-Control: public, max-age=31536000, immutable
+/css/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800

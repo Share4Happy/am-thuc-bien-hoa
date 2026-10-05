@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFB800"/>
+    </linearGradient>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D1F1A"/>
+      <stop offset="100%" stop-color="#1A110D"/>
+    </radialGradient>
+  </defs>
+  <!-- Background circle with gold ring -->
+  <circle cx="32" cy="32" r="30" fill="url(#bgGrad)" stroke="#FFB800" stroke-width="2.5"/>
+  
+  <!-- Steam swirls -->
+  <path d="M25 18 C23 15, 27 13, 25 10" fill="none" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <path d="M32 19 C30 15, 34 13, 32 9" fill="none" stroke="#FFD54F" stroke-width="2.2" stroke-linecap="round" opacity="0.9"/>
+  <path d="M39 18 C37 15, 41 13, 39 10" fill="none" stroke="#FFD54F" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Chopsticks -->
+  <line x1="16" y1="23" x2="48" y2="19" stroke="#E6D3B3" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="15" y1="27" x2="49" y2="21" stroke="#FFD54F" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Food Bowl -->
+  <path d="M14 26 C15 42, 49 42, 50 26 Z" fill="url(#goldGrad)"/>
+  <!-- Rim highlight -->
+  <ellipse cx="32" cy="26" rx="18" ry="3.5" fill="#FFE082"/>
+  
+  <!-- Base stand of the bowl -->
+  <path d="M26 42 L24 46 C24 47, 40 47, 40 46 L38 42 Z" fill="#FFA000"/>
+  
+  <!-- Decorative small star/sparkle -->
+  <path d="M48 33 L49.5 35 L52 35.5 L50 37 L50.5 39.5 L48 38 L45.5 39.5 L46 37 L44 35.5 L46.5 35 Z" fill="#FFFFFF" opacity="0.9"/>
+</svg>

@@ -1,0 +1,133 @@
+/* ==========================================================================
+   9. "NGƯỜI TRẢI NGHIỆM NÓI GÌ?" (Image 8)
+   ========================================================================== */
+.reviews-section {
+    position: relative;
+    background-color: var(--bg-page);
+    padding: 60px 0 60px;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.reviews-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #172D1E;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.reviews-title-gold {
+    color: var(--color-gold);
+}
+
+.reviews-subtitle {
+    font-size: 1.05rem;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--text-sub);
+}
+
+/* 3 Testimonials Grid */
+.reviews-3-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+.review-card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    padding: 26px 24px 20px;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.review-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-verified-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #2E7D32;
+    background: rgba(46, 125, 50, 0.1);
+    padding: 2px 7px;
+    border-radius: var(--radius-pill);
+    margin-left: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    vertical-align: middle;
+}
+
+.review-user-name {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+}
+
+.review-stars {
+    color: var(--color-gold);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.review-google-logo {
+    font-size: 1.5rem;
+    color: #EA4335;
+}
+
+.review-card-text {
+    font-size: 0.88rem;
+    color: #483F38;
+    line-height: 1.6;
+    margin: 20px 0;
+    flex-grow: 1;
+}
+
+.review-card-footer {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #9E938B;
+    border-top: 1px solid #F1EBE5;
+    padding-top: 10px;
+}
+

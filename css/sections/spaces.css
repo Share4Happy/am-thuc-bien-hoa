@@ -1,0 +1,113 @@
+/* ==========================================================================
+   4. "KHÔNG GIAN THÀNH PHỐ" (Image 4)
+   ========================================================================== */
+.city-spaces-section {
+    position: relative;
+    background-color: var(--bg-page);
+    padding: 40px 0 60px;
+}
+
+/* 3 Places Cards Grid */
+.spaces-3-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.space-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.space-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.space-img-box {
+    position: relative;
+    height: 260px;
+    background-color: #ECE5DC;
+}
+
+.space-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.space-number-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--color-dark);
+    font-size: 0.85rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.space-card-body {
+    background-color: var(--color-dark-card);
+    color: #FFFFFF;
+    padding: 22px 24px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.space-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin-bottom: 8px;
+}
+
+.space-card-desc {
+    font-size: 0.9rem;
+    color: var(--text-light-muted);
+    line-height: 1.55;
+    padding-right: 36px;
+}
+
+.space-card-body .circle-arrow-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Quote on bottom left & button row */
+.spaces-footer-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.city-quote {
+    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #3D352F;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.city-quote i {
+    font-size: 1.5rem;
+    color: #7D726A;
+    line-height: 1;
+}
+
