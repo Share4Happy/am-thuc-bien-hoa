@@ -941,39 +941,117 @@
     </section>
 
     <!-- =================================================================
-         9. "GỬI ĐÁNH GIÁ CHO CHÚNG TÔI" (Image 9 Reference)
+         9. BẢNG THU THẬP THÔNG TIN & TƯ VẤN ẨM THỰC (Google Sheets Integration)
          ================================================================= -->
     <section class="feedback-section" id="feedback">
         <div class="container">
-            <h2 class="feedback-title">GỬI ĐÁNH GIÁ CHO CHÚNG TÔI</h2>
+            <div class="feedback-header">
+                <span class="feedback-badge"><i class="ri-customer-service-2-line"></i> ĐỒNG HÀNH CÙNG BẠN</span>
+                <h2 class="feedback-title">KẾT NỐI & TƯ VẤN ẨM THỰC BIÊN HÒA</h2>
+                <p class="feedback-subtitle">
+                    Bạn cần gợi ý quán ngon gia truyền, tìm địa điểm tổ chức tiệc gia đình hay mong muốn hợp tác giới thiệu quán ăn? Hãy để lại thông tin, đội ngũ Ẩm Thực Biên Hòa sẽ liên hệ hỗ trợ bạn sớm nhất!
+                </p>
+            </div>
 
             <div class="feedback-card">
-                <div class="feedback-rating-row">
-                    <span class="feedback-rating-question">Bạn đánh giá tổng thể trang web thế nào?</span>
-                    <div class="feedback-interactive-stars" id="star-rating">
-                        <i class="ri-star-line" data-val="1"></i>
-                        <i class="ri-star-line" data-val="2"></i>
-                        <i class="ri-star-line" data-val="3"></i>
-                        <i class="ri-star-line" data-val="4"></i>
-                        <i class="ri-star-line" data-val="5"></i>
+                <form class="lead-collection-form" id="lead-form" novalidate autocomplete="off">
+                    <!-- Anti-spam Honeypot field (hidden from human visitors) -->
+                    <input type="text" name="website" id="lead-website" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="lead-form-grid">
+                        <!-- Họ và tên -->
+                        <div class="form-group">
+                            <label for="lead-fullname" class="form-label">
+                                Họ và tên <span class="required-star">*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="ri-user-3-line"></i>
+                                <input type="text" id="lead-fullname" name="fullName" class="form-control" placeholder="Ví dụ: Nguyễn Văn An" maxlength="60" minlength="2" required>
+                            </div>
+                        </div>
+
+                        <!-- Số điện thoại -->
+                        <div class="form-group">
+                            <label for="lead-phone" class="form-label">
+                                Số điện thoại <span class="required-star">*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="ri-phone-line"></i>
+                                <input type="tel" id="lead-phone" name="phone" class="form-control" placeholder="Ví dụ: 0912 345 678" maxlength="20" required>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="lead-email" class="form-label">
+                                Địa chỉ Email <span class="required-star">*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="ri-mail-line"></i>
+                                <input type="email" id="lead-email" name="email" class="form-control" placeholder="name@domain.com" maxlength="100" required>
+                            </div>
+                        </div>
+
+                        <!-- Khu vực / Phường tại Biên Hòa -->
+                        <div class="form-group">
+                            <label for="lead-region" class="form-label">
+                                Khu vực / Phường tại Biên Hòa <span class="required-star">*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="ri-map-pin-2-line"></i>
+                                <input type="text" id="lead-region" name="region" list="bienhoa-regions" class="form-control" placeholder="Chọn hoặc nhập phường..." maxlength="60" required>
+                                <datalist id="bienhoa-regions">
+                                    <option value="Phường Quyết Thắng">
+                                    <option value="Phường Thống Nhất">
+                                    <option value="Phường Trung Dũng">
+                                    <option value="Phường Tân Phong">
+                                    <option value="Phường Tam Hiệp">
+                                    <option value="Phường Trảng Dài">
+                                    <option value="Phường Bửu Long">
+                                    <option value="Phường Long Bình">
+                                    <option value="Phường Tân Mai">
+                                    <option value="Phường Tân Tiến">
+                                    <option value="Phường Hiệp Hòa (Cù Lao Phố)">
+                                    <option value="Xã Bình Hòa (Làng Bưởi Tân Triều)">
+                                    <option value="Khu vực khác tại Đồng Nai">
+                                </datalist>
+                            </div>
+                        </div>
+
+                        <!-- Nhu cầu tư vấn / Ghi chú -->
+                        <div class="form-group full-width">
+                            <label for="lead-address" class="form-label">
+                                Nhu cầu tư vấn / Món ăn quan tâm / Ghi chú
+                            </label>
+                            <div class="input-with-icon textarea-icon">
+                                <i class="ri-chat-1-line"></i>
+                                <textarea id="lead-address" name="address" class="form-control form-textarea" rows="3" placeholder="Ví dụ: Tìm quán lẩu tôm ngon cho gia đình 10 người, hoặc cần tư vấn mua rượu bưởi làm quà..." maxlength="200"></textarea>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <p class="feedback-instruction">Vui lòng dành chút thời gian cho chúng tôi ý kiến của bạn</p>
+                    <!-- Consent Checkbox -->
+                    <div class="form-consent-row">
+                        <label class="consent-checkbox-label">
+                            <input type="checkbox" id="lead-consent" name="consent" checked required>
+                            <span class="custom-checkbox"></span>
+                            <span class="consent-text">Tôi đồng ý cung cấp thông tin để Ẩm Thực Biên Hòa liên hệ tư vấn và gửi gợi ý địa điểm.</span>
+                        </label>
+                    </div>
 
-                <form class="feedback-input-box" id="feedback-form" novalidate autocomplete="off">
-                    <!-- Anti-spam Honeypot (hidden from human visitors) -->
-                    <input type="text" name="website_hp" id="feedback-hp" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
-                    <input type="text" class="feedback-input-line" id="feedback-text" placeholder="Nhập ý kiến hoặc câu hỏi của bạn tại đây..." maxlength="500" minlength="4" required>
-                    <button type="submit" class="feedback-send-btn" aria-label="Gửi đánh giá">
-                        <i class="ri-send-plane-2-fill"></i>
-                    </button>
+                    <!-- Submit Button -->
+                    <div class="form-submit-row">
+                        <button type="submit" class="btn-lead-submit" id="btn-lead-submit">
+                            <span class="btn-text">GỬI THÔNG TIN LIÊN HỆ</span>
+                            <i class="ri-send-plane-fill"></i>
+                        </button>
+                    </div>
                 </form>
             </div>
 
             <div class="feedback-subtext">
-                <p class="feedback-subtext-title">Bạn có thắc mắc hay cần tư vấn ?</p>
-                <p class="feedback-subtext-desc">Hãy để lại thông tin, đội ngũ của chúng tôi sẽ liên hệ sớm nhất.</p>
+                <p class="feedback-subtext-title">Cam kết bảo mật thông tin</p>
+                <p class="feedback-subtext-desc">Thông tin của bạn được bảo mật tuyệt đối và chỉ sử dụng cho mục đích tư vấn ẩm thực Biên Hòa.</p>
             </div>
         </div>
     </section>

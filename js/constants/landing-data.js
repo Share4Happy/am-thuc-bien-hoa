@@ -13,7 +13,8 @@ export const SITE_CONFIG = {
     canonicalUrl: 'https://amthucbienhoa.share4happy.com/',
     wpHomeUrl: 'https://share4happy.com/',
     wpNewsApiUrl: 'https://share4happy.com/wp-json/wp/v2/posts?categories=207&_embed&per_page=5',
-    localFallbackApiUrl: 'data/posts.json'
+    localFallbackApiUrl: 'data/posts.json',
+    leadEndpoint: 'https://script.google.com/macros/s/AKfycbwSjUh2fPMloUnloNes4bxF7pEhEFy9nHGjktMOEHFAtRnnzVcpFBkClM4PO0426t1z/exec'
 };
 
 export const NAV_LINKS = [
