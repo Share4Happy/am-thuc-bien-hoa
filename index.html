@@ -81,7 +81,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" crossorigin="anonymous">
     
     <!-- Custom Style (Aggregated modular CSS) -->
-    <link rel="stylesheet" href="css/main.css?v=2">
+    <link rel="stylesheet" href="css/main.css?v=3">
 </head>
 <body>
 
@@ -942,7 +942,7 @@
     </section>
 
     <!-- =================================================================
-         9. BẢNG THU THẬP THÔNG TIN & TƯ VẤN ẨM THỰC (Google Sheets Integration)
+         9. BẢNG THU THẬP THÔNG TIN & TƯ VẤN ẨM THỰC (Google Form Integration)
          ================================================================= -->
     <section class="feedback-section" id="feedback">
         <div class="container">
@@ -955,9 +955,12 @@
             </div>
 
             <div class="feedback-card">
-                <form class="lead-collection-form" id="lead-form" novalidate autocomplete="off">
+                <form class="lead-collection-form" id="lead-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeqkJsPaU2bTmzwuLELj2ygbJLBsfN45js1uvwOmDDF7XEEDQ/formResponse" method="POST" target="gform-hidden-iframe" novalidate autocomplete="off">
                     <!-- Anti-spam Honeypot field (hidden from human visitors) -->
                     <input type="text" name="website" id="lead-website" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <!-- Nguồn trang (ẩn, tự động gửi kèm): entry.925381880 -->
+                    <input type="hidden" name="entry.925381880" id="lead-source" value="Landing Page Ẩm Thực Biên Hòa">
 
                     <div class="lead-form-grid">
                         <!-- Họ và tên -->
@@ -967,40 +970,40 @@
                             </label>
                             <div class="input-with-icon">
                                 <i class="ri-user-3-line"></i>
-                                <input type="text" id="lead-fullname" name="fullName" class="form-control" placeholder="Ví dụ: Nguyễn Văn An" maxlength="60" minlength="2" required>
+                                <input type="text" id="lead-fullname" name="entry.118746383" class="form-control" placeholder="Ví dụ: Nguyễn Văn An" maxlength="60" minlength="2" required>
                             </div>
                         </div>
 
-                        <!-- Số điện thoại -->
+                        <!-- Số điện thoại (Zalo) -->
                         <div class="form-group">
                             <label for="lead-phone" class="form-label">
-                                Số điện thoại <span class="required-star">*</span>
+                                Số điện thoại (Zalo) <span class="required-star">*</span>
                             </label>
                             <div class="input-with-icon">
                                 <i class="ri-phone-line"></i>
-                                <input type="tel" id="lead-phone" name="phone" class="form-control" placeholder="Ví dụ: 0912 345 678" maxlength="20" required>
+                                <input type="tel" id="lead-phone" name="entry.1332627325" class="form-control" placeholder="Ví dụ: 0912 345 678" maxlength="20" required>
                             </div>
                         </div>
 
-                        <!-- Email -->
+                        <!-- Địa chỉ Email -->
                         <div class="form-group">
                             <label for="lead-email" class="form-label">
                                 Địa chỉ Email <span class="required-star">*</span>
                             </label>
                             <div class="input-with-icon">
                                 <i class="ri-mail-line"></i>
-                                <input type="email" id="lead-email" name="email" class="form-control" placeholder="name@domain.com" maxlength="100" required>
+                                <input type="email" id="lead-email" name="entry.998852611" class="form-control" placeholder="name@domain.com" maxlength="100" required>
                             </div>
                         </div>
 
-                        <!-- Khu vực / Phường tại Biên Hòa -->
+                        <!-- Khu vực sinh sống -->
                         <div class="form-group">
                             <label for="lead-region" class="form-label">
-                                Khu vực / Phường tại Biên Hòa <span class="required-star">*</span>
+                                Khu vực sinh sống
                             </label>
                             <div class="input-with-icon">
                                 <i class="ri-map-pin-2-line"></i>
-                                <input type="text" id="lead-region" name="region" list="bienhoa-regions" class="form-control" placeholder="Chọn hoặc nhập phường..." maxlength="60" required>
+                                <input type="text" id="lead-region" name="entry.722812867" list="bienhoa-regions" class="form-control" placeholder="Chọn hoặc nhập khu vực/phường..." maxlength="60">
                                 <datalist id="bienhoa-regions">
                                     <option value="Phường Quyết Thắng">
                                     <option value="Phường Thống Nhất">
@@ -1018,26 +1021,6 @@
                                 </datalist>
                             </div>
                         </div>
-
-                        <!-- Nhu cầu tư vấn / Ghi chú -->
-                        <div class="form-group full-width">
-                            <label for="lead-address" class="form-label">
-                                Nhu cầu tư vấn / Món ăn quan tâm / Ghi chú
-                            </label>
-                            <div class="input-with-icon textarea-icon">
-                                <i class="ri-chat-1-line"></i>
-                                <textarea id="lead-address" name="address" class="form-control form-textarea" rows="3" placeholder="Ví dụ: Tìm quán lẩu tôm ngon cho gia đình 10 người, hoặc cần tư vấn mua rượu bưởi làm quà..." maxlength="200"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Consent Checkbox -->
-                    <div class="form-consent-row">
-                        <label class="consent-checkbox-label">
-                            <input type="checkbox" id="lead-consent" name="consent" checked required>
-                            <span class="custom-checkbox"></span>
-                            <span class="consent-text">Tôi đồng ý cung cấp thông tin để Ẩm Thực Biên Hòa liên hệ tư vấn và gửi gợi ý địa điểm.</span>
-                        </label>
                     </div>
 
                     <!-- Submit Button -->
@@ -1048,6 +1031,22 @@
                         </button>
                     </div>
                 </form>
+
+                <!-- Hidden iframe fallback for seamless no-reload submission -->
+                <iframe name="gform-hidden-iframe" id="gform-hidden-iframe" style="display:none !important;" aria-hidden="true"></iframe>
+
+                <!-- Màn hình thông báo thành công -->
+                <div class="feedback-success-screen" id="feedback-success" style="display:none;">
+                    <div class="feedback-success-icon">
+                        <i class="ri-checkbox-circle-fill"></i>
+                    </div>
+                    <h3 class="feedback-success-title">Đã gửi thông tin thành công!</h3>
+                    <p class="feedback-success-desc">Ban tư vấn sẽ liên hệ sớm nhất.</p>
+                    <button type="button" class="btn-lead-reset" id="btn-lead-reset">
+                        <i class="ri-refresh-line"></i>
+                        <span>Gửi yêu cầu mới</span>
+                    </button>
+                </div>
             </div>
 
             <div class="feedback-subtext">
@@ -1105,6 +1104,6 @@
     </div>
 
     <!-- Production JavaScript Bundle (Standalone IIFE) -->
-    <script src="js/app.js?v=2"></script>
+    <script src="js/app.js?v=3"></script>
 </body>
 </html>

@@ -681,19 +681,6 @@
         border-radius: 8px;
     }
 
-    .form-textarea {
-        min-height: 85px;
-    }
-
-    .form-consent-row {
-        margin: 16px 0 20px;
-    }
-
-    .consent-text {
-        font-size: 0.8rem;
-        line-height: 1.45;
-    }
-
     .btn-lead-submit {
         width: 100%;
         min-height: 48px;

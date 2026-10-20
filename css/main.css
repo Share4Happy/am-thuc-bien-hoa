@@ -20,7 +20,7 @@
 @import 'sections/story.css';
 @import 'sections/news.css';
 @import 'sections/reviews.css';
-@import 'sections/feedback.css?v=2';
+@import 'sections/feedback.css?v=3';
 @import 'sections/footer.css';
 
 /* 3. Responsive Overrides (Laptop, Tablet, Mobile) */

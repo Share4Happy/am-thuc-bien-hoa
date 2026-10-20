@@ -15,7 +15,8 @@
         wpHomeUrl: 'https://share4happy.com/',
         wpNewsApiUrl: 'https://share4happy.com/wp-json/wp/v2/posts?categories=207&_embed&per_page=5',
         localFallbackApiUrl: 'data/posts.json',
-        leadEndpoint: 'https://script.google.com/macros/s/AKfycbwSjUh2fPMloUnloNes4bxF7pEhEFy9nHGjktMOEHFAtRnnzVcpFBkClM4PO0426t1z/exec'
+        googleFormActionUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeqkJsPaU2bTmzwuLELj2ygbJLBsfN45js1uvwOmDDF7XEEDQ/formResponse',
+        pageSource: 'Landing Page Ẩm Thực Biên Hòa'
     };
 
     // ------------------------------------------------------------------------
@@ -419,14 +420,39 @@
     }
 
     // ------------------------------------------------------------------------
-    // Section 5: Lead Collection Form & Google Sheets Integration
+    // Section 5: Lead Collection Form & Google Form Integration
     // ------------------------------------------------------------------------
     function initFeedbackSection() {
         const form = document.getElementById('lead-form');
         if (!form) return;
 
         const submitBtn = document.getElementById('btn-lead-submit');
-        const endpoint = CONFIG.leadEndpoint || 'https://script.google.com/macros/s/AKfycbwSjUh2fPMloUnloNes4bxF7pEhEFy9nHGjktMOEHFAtRnnzVcpFBkClM4PO0426t1z/exec';
+        const successScreen = document.getElementById('feedback-success');
+        const resetBtn = document.getElementById('btn-lead-reset');
+
+        const actionUrl = CONFIG.googleFormActionUrl || 'https://docs.google.com/forms/d/e/1FAIpQLSeqkJsPaU2bTmzwuLELj2ygbJLBsfN45js1uvwOmDDF7XEEDQ/formResponse';
+        const pageSource = CONFIG.pageSource || 'Landing Page Ẩm Thực Biên Hòa';
+
+        // Đảm bảo trường nguồn trang luôn được gán giá trị mặc định
+        const sourceInput = form.querySelector('input[name="entry.925381880"]');
+        if (sourceInput) {
+            sourceInput.value = pageSource;
+        }
+
+        // Xử lý nút "Gửi yêu cầu mới" sau khi gửi thành công
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                form.reset();
+                if (sourceInput) {
+                    sourceInput.value = pageSource;
+                }
+                form.style.display = '';
+                if (successScreen) {
+                    successScreen.style.display = 'none';
+                }
+            });
+        }
+
         let isSubmitting = false;
         let lastSubmitTime = 0;
 
@@ -437,70 +463,49 @@
             // 1. Anti-spam Honeypot Check (Filled only by spam bots)
             const hp = form.querySelector('input[name="website"]');
             if (hp && hp.value.trim() !== '') {
-                // Silently drop bot submission
                 showToast('Đang xử lý thông tin...', 'ri-loader-4-line');
                 form.reset();
                 return;
             }
 
-            // 2. Client-side Rate Limiting (Cooldown 8 seconds)
+            // 2. Client-side Rate Limiting (Cooldown 6 seconds)
             const now = Date.now();
-            if (now - lastSubmitTime < 8000) {
+            if (now - lastSubmitTime < 6000) {
                 showToast('Vui lòng đợi vài giây trước khi gửi tiếp!', 'ri-time-line');
                 return;
             }
 
             // 3. Extract and Clean Form Values
-            const fullName = (form.querySelector('input[name="fullName"]')?.value || '').trim();
-            const rawPhone = (form.querySelector('input[name="phone"]')?.value || '').trim().replace(/\s+/g, '');
-            const email = (form.querySelector('input[name="email"]')?.value || '').trim().toLowerCase();
-            const region = (form.querySelector('input[name="region"]')?.value || '').trim();
-            const address = (form.querySelector('textarea[name="address"]')?.value || '').trim();
-            const consent = form.querySelector('input[name="consent"]')?.checked === true;
+            const fullName = (form.querySelector('input[name="entry.118746383"]')?.value || '').trim();
+            const rawPhone = (form.querySelector('input[name="entry.1332627325"]')?.value || '').trim().replace(/\s+/g, '');
+            const email = (form.querySelector('input[name="entry.998852611"]')?.value || '').trim().toLowerCase();
+            const region = (form.querySelector('input[name="entry.722812867"]')?.value || '').trim();
 
             // 4. Client-side Validations
             if (fullName.length < 2) {
                 showToast('Vui lòng nhập họ và tên (tối thiểu 2 ký tự)!', 'ri-alert-line');
-                form.querySelector('input[name="fullName"]')?.focus();
+                form.querySelector('input[name="entry.118746383"]')?.focus();
                 return;
             }
 
             const phoneRegex = /^(?:\+?84|0)[35789]\d{8}$/;
             if (!phoneRegex.test(rawPhone)) {
-                showToast('Số điện thoại không hợp lệ (Ví dụ: 0912345678)!', 'ri-alert-line');
-                form.querySelector('input[name="phone"]')?.focus();
+                showToast('Số điện thoại không hợp lệ (Ví dụ: 0912 345 678)!', 'ri-alert-line');
+                form.querySelector('input[name="entry.1332627325"]')?.focus();
                 return;
             }
 
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
             if (!emailRegex.test(email)) {
                 showToast('Vui lòng nhập địa chỉ email hợp lệ!', 'ri-alert-line');
-                form.querySelector('input[name="email"]')?.focus();
+                form.querySelector('input[name="entry.998852611"]')?.focus();
                 return;
             }
 
-            if (region.length < 2) {
-                showToast('Vui lòng nhập hoặc chọn khu vực/phường tại Biên Hòa!', 'ri-alert-line');
-                form.querySelector('input[name="region"]')?.focus();
-                return;
+            // 5. Tự động gán trường "Nguồn trang" (entry.925381880) ngầm trước khi gửi
+            if (sourceInput) {
+                sourceInput.value = pageSource;
             }
-
-            if (!consent) {
-                showToast('Vui lòng tích đồng ý cung cấp thông tin để tiếp tục!', 'ri-checkbox-blank-line');
-                return;
-            }
-
-            // 5. Build Payload matching Google Apps Script structure
-            const payload = {
-                fullName: fullName.slice(0, 60),
-                phone: rawPhone.slice(0, 20),
-                email: email.slice(0, 100),
-                region: region.slice(0, 60),
-                address: address.slice(0, 200),
-                consent: true,
-                source: 'Website Ẩm Thực Biên Hòa',
-                targetSheet: 'Ẩm thực Biên Hoà'
-            };
 
             // 6. Set UI Loading State
             isSubmitting = true;
@@ -510,46 +515,66 @@
                 submitBtn.innerHTML = '<i class="ri-loader-4-line ri-spin"></i> <span class="btn-text">Đang gửi dữ liệu...</span>';
             }
 
+            // 7. Chuẩn bị dữ liệu gửi Google Form
+            const params = new URLSearchParams();
+            params.append('entry.118746383', fullName);
+            params.append('entry.1332627325', rawPhone);
+            params.append('entry.998852611', email);
+            params.append('entry.722812867', region);
+            params.append('entry.925381880', pageSource);
+
+            let fetchSuccess = false;
+
             try {
-                // Send as text/plain to avoid CORS preflight OPTIONS rejection on Google Apps Script
-                const response = await fetch(endpoint, {
+                // Gửi dữ liệu ngầm bằng fetch (mode: 'no-cors')
+                await fetch(actionUrl, {
                     method: 'POST',
+                    mode: 'no-cors',
                     headers: {
-                        'Content-Type': 'text/plain;charset=utf-8'
+                        'Content-Type': 'application/x-www-form-urlencoded'
                     },
-                    body: JSON.stringify(payload)
+                    body: params
                 });
+                fetchSuccess = true;
+            } catch (fetchErr) {
+                console.warn('Fetch Google Form failed, activating hidden iframe fallback:', fetchErr);
+            }
 
-                lastSubmitTime = Date.now();
-
-                let data = {};
+            // Fallback: nếu fetch gặp lỗi (vd do mạng, CSP, ad-blocker), gửi qua hidden iframe không reload trang
+            if (!fetchSuccess) {
                 try {
-                    data = await response.json();
-                } catch (jsonErr) {
-                    data = { ok: response.ok };
+                    let iframe = document.getElementById('gform-hidden-iframe');
+                    if (!iframe) {
+                        iframe = document.createElement('iframe');
+                        iframe.id = 'gform-hidden-iframe';
+                        iframe.name = 'gform-hidden-iframe';
+                        iframe.style.display = 'none';
+                        document.body.appendChild(iframe);
+                    }
+                    form.target = 'gform-hidden-iframe';
+                    form.action = actionUrl;
+                    form.method = 'POST';
+                    HTMLFormElement.prototype.submit.call(form);
+                } catch (iframeErr) {
+                    console.error('Fallback iframe submission failed:', iframeErr);
                 }
+            }
 
-                if (data.duplicate) {
-                    showToast('Số điện thoại này đã gửi yêu cầu gần đây. Chúng tôi sẽ liên hệ bạn sớm!', 'ri-information-line');
-                    form.reset();
-                } else if (data.ok) {
-                    showToast('Đăng ký thành công! Đội ngũ Ẩm Thực Biên Hòa sẽ liên hệ bạn sớm nhất.', 'ri-checkbox-circle-fill');
-                    form.reset();
-                } else {
-                    showToast(data.message || 'Không thể gửi dữ liệu lúc này. Vui lòng gọi Hotline để được hỗ trợ ngay!', 'ri-error-warning-line');
-                }
-            } catch (netErr) {
-                console.warn('Google Sheets submission notice:', netErr);
-                // Fallback notification for opaque redirect completions
-                showToast('Thông tin đã được ghi nhận! Chúng tôi sẽ sớm liên hệ qua SĐT của bạn.', 'ri-checkbox-circle-fill');
-                form.reset();
-            } finally {
-                isSubmitting = false;
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.classList.remove('is-submitting');
-                    submitBtn.innerHTML = '<span class="btn-text">GỬI THÔNG TIN LIÊN HỆ</span> <i class="ri-send-plane-fill"></i>';
-                }
+            lastSubmitTime = Date.now();
+
+            // 8. Chuyển sang màn hình thông báo thành công
+            form.style.display = 'none';
+            if (successScreen) {
+                successScreen.style.display = 'block';
+            }
+
+            showToast('Đã gửi thông tin thành công! Ban tư vấn sẽ liên hệ sớm nhất.', 'ri-checkbox-circle-fill');
+
+            isSubmitting = false;
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('is-submitting');
+                submitBtn.innerHTML = '<span class="btn-text">GỬI THÔNG TIN LIÊN HỆ</span> <i class="ri-send-plane-fill"></i>';
             }
         });
     }
